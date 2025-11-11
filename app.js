@@ -195,6 +195,7 @@ const initializeLetsTalkForm = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   initializeLetsTalkForm();
+  initializeQuoteSlider();
 });
 
 // Portfolio
@@ -202,3 +203,44 @@ document.addEventListener("DOMContentLoaded", () => {
 // Service
 
 // About
+
+// Quotes slider
+const initializeQuoteSlider = () => {
+  const slidesContainer = document.querySelector("[data-quote-slides]");
+  if (!slidesContainer) return;
+
+  const slides = Array.from(
+    slidesContainer.querySelectorAll("[data-quote-slide]")
+  );
+  if (!slides.length) return;
+
+  let currentIndex =
+    slides.findIndex((slide) => slide.classList.contains("is-active")) || 0;
+
+  const applyActiveSlide = (nextIndex) => {
+    slides[currentIndex]?.classList.remove("is-active");
+    currentIndex = (nextIndex + slides.length) % slides.length;
+    slides[currentIndex]?.classList.add("is-active");
+  };
+
+  slidesContainer.querySelectorAll("[data-quote-prev]").forEach((button) => {
+    button.addEventListener("click", () => {
+      applyActiveSlide(currentIndex - 1);
+    });
+  });
+
+  slidesContainer.querySelectorAll("[data-quote-next]").forEach((button) => {
+    button.addEventListener("click", () => {
+      applyActiveSlide(currentIndex + 1);
+    });
+  });
+
+  // Ensure only the current slide is visible on init
+  slides.forEach((slide, index) => {
+    if (index === currentIndex) {
+      slide.classList.add("is-active");
+    } else {
+      slide.classList.remove("is-active");
+    }
+  });
+};

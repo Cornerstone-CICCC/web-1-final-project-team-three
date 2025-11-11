@@ -272,10 +272,497 @@
 }
 
 // you are a star section
+.you-are-a-star {
+  background: $color-light-pink;
+
+  &__wrapper {
+    margin: 60px auto 0 auto;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__intro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $font-baskervville;
+    font-weight: 400;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: $color-bold-main;
+  }
+
+  &__divider {
+    display: block;
+    width: 200px;
+    height: 1px;
+    background-color: $color-accent-pink;
+  }
+
+  &__description {
+    margin: 0;
+    max-width: 540px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba($color-brand-black, 0.78);
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 3rem;
+    border: 1px solid #5e4a49;
+    color: #5e4a49;
+    text-decoration: none;
+    font-family: $font-baskervville;
+    font-size: 20px;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-dark-pink;
+      color: $color-pale-white;
+      border-color: $color-dark-pink;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-dark-pink;
+      outline-offset: 4px;
+    }
+  }
+
+  &__gallery {
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(1.25rem, 3vw, 1.75rem);
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__card {
+    margin: 0;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    height: 500px;
+    @media (max-width: 1024px) {
+      height: 300px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+}
 
 // quotes section
+.quotes {
+  background: $color-light-pink;
+  padding-bottom: 80px;
+
+  &__wrapper {
+    width: min(860px, 92%);
+    margin: 0 auto;
+  }
+
+  &__slides {
+    position: relative;
+  }
+
+  &__slide {
+    display: none;
+    text-align: center;
+    color: $color-brand-black;
+    animation: fadeIn 0.4s ease;
+
+    &.is-active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(1.25rem, 2.5vw, 2rem);
+    }
+  }
+
+  &__icon {
+    width: clamp(1.6rem, 3vw, 2rem);
+    height: auto;
+  }
+
+  &__text {
+    margin: 0;
+    font-family: $font-baskervville;
+    font-size: clamp(1.45rem, 2.6vw, 1.85rem);
+    line-height: 1.65;
+    color: rgba($color-brand-black, 0.85);
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    margin-top: clamp(1rem, 2vw, 1.75rem);
+  }
+
+  &__signature {
+    width: clamp(5.5rem, 10vw, 8rem);
+    height: auto;
+  }
+
+  &__arrow {
+    border: none;
+    background: transparent;
+    font-size: clamp(1.75rem, 3vw, 2.1rem);
+    color: rgba($color-brand-black, 0.45);
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-bold-main;
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 2px rgba($color-bold-main, 0.35);
+      border-radius: 50%;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// makeup 101 section
+.makeup-101 {
+  background: $color-pale-white;
+  margin: 0 5%;
+  @media (max-width: 1024px) {
+    margin: 0;
+  }
+
+  &__title {
+    background: $color-light-pink;
+    text-align: center;
+    font-family: $font-baskervville;
+    font-size: 80px;
+    padding: 60px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: $color-bold-main;
+  }
+
+  &__wrapper {
+    background: $color-light-pink;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(2.5rem, 5vw, 4rem);
+    align-items: stretch;
+
+    @media (max-width: 980px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__content {
+    padding: clamp(2.5rem, 5vw, 3.5rem);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2rem, 4vw, 3rem);
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 3vw, 2.25rem);
+  }
+
+  &__cta {
+    align-self: flex-start;
+    padding: 0.9rem 2.8rem;
+    border: 1px solid $color-bold-main;
+    font-family: $font-baskervville;
+    font-size: 1.05rem;
+    color: $color-bold-main;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-bold-main;
+      color: $color-pale-white;
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba($color-bold-main, 0.35);
+      outline-offset: 4px;
+    }
+  }
+
+  &__media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__frame {
+    position: relative;
+    position: relative;
+    display: inline-block;
+
+    img {
+      display: block;
+      width: 407px;
+      height: 530px;
+      object-fit: cover;
+      @media (max-width: 1024px) {
+        width: 100vw;
+        height: auto;
+      }
+    }
+  }
+
+  &__frame::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    box-shadow: inset 0 0 0 1px white;
+  }
+}
+
+.class-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  align-items: start;
+  color: $color-brand-black;
+
+  &__icon {
+    width: clamp(32px, 4vw, 40px);
+    height: clamp(32px, 4vw, 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $font-baskervville;
+    font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+    color: $color-bold-main;
+  }
+
+  &__description {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba($color-brand-black, 0.75);
+  }
+
+  &__arrow {
+    font-size: 60px;
+    font-weight: 400;
+    color: inherit;
+  }
+
+  @media (max-width: 720px) {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    text-align: center;
+
+    &__link {
+      align-self: center;
+    }
+  }
+}
 
 // makeup & hairstyle section
+.makeup-hairstyle {
+  background: $color-pale-white;
+  padding: clamp(5rem, 9vw, 7rem) 0;
+
+  &__wrapper {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  &__intro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 1.8rem);
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $font-baskervville;
+    font-size: clamp(3rem, 6vw, 5rem);
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: $color-bold-main;
+  }
+
+  &__divider {
+    display: block;
+    width: clamp(6rem, 10vw, 7rem);
+    height: 1px;
+    background-color: rgba($color-bold-main, 0.35);
+  }
+
+  &__description {
+    margin: 0;
+    max-width: 28rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: rgba($color-brand-black, 0.82);
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 2.6rem;
+    border: 1px solid rgba($color-brand-black, 0.35);
+    color: $color-brand-black;
+    text-decoration: none;
+    font-family: $font-baskervville;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease,
+      border-color 0.3s ease;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-bold-main;
+      color: $color-pale-white;
+      border-color: $color-bold-main;
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba($color-bold-main, 0.35);
+      outline-offset: 4px;
+    }
+  }
+
+  &__services {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.5rem, 4vw, 2.75rem);
+
+    @media (max-width: 960px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.service-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  &__media {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    box-shadow: 0 24px 48px rgba($color-brand-black, 0.12);
+    border: 1px solid rgba($color-bold-main, 0.2);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    bottom: clamp(1.25rem, 3vw, 2rem);
+    left: clamp(1.25rem, 3vw, 2rem);
+    margin: 0;
+    font-family: $font-baskervville;
+    font-size: clamp(2.2rem, 3.2vw, 3.6rem);
+    letter-spacing: 0.18em;
+    text-transform: capitalize;
+    color: $color-bold-main;
+    text-align: left;
+    pointer-events: none;
+  }
+
+  &:hover img,
+  &:focus-within img {
+    transform: scale(1.04);
+  }
+
+  &--wedding {
+    .service-card__media {
+      border: 2px solid rgba($color-accent-pink, 0.6);
+    }
+
+    @media (min-width: 961px) {
+      &::after {
+        content: "";
+        position: absolute;
+        top: -28px;
+        left: -28px;
+        right: -28px;
+        bottom: -28px;
+        border: 1px solid rgba($color-accent-pink, 0.65);
+        z-index: -1;
+        transform: translate(38px, -38px);
+        pointer-events: none;
+      }
+    }
+  }
+}
 
 // makeup 101 section
 
