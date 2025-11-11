@@ -1,3 +1,46 @@
+body {
+  margin: 0;
+  font-family: "Avenir";
+  font-size: 18px;
+  line-height: 150px;
+  color: #191919;
+  background-color: #f8f6f4;
+}
 
+h1 {
+  font-size: 80px;
+  line-height: 120px;
+  font-family: "Baskervville";
+}
+
+h2 {
+  font-size: 68px;
+  line-height: 110px;
+  font-family: "Baskervville";
+}
+
+h3 {
+  font-size: 48px;
+  line-height: 130px;
+  font-family: "Baskervville";
+}
+
+h4 {
+  font-size: 36px;
+  line-height: 120px;
+  font-family: "Baskervville";
+}
+
+h5 {
+  font-size: 32px;
+  line-height: 130px;
+  font-family: "Baskervville";
+}
+
+h6 {
+  font-size: 24px;
+  line-height: 130px;
+  font-family: "Baskervville";
+}
 
 /*# sourceMappingURL=main.css.map */
