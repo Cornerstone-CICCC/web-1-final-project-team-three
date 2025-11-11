@@ -1,1 +1,561 @@
 @use "../colors" as *;
+@use "../font" as *;
+
+// first view section
+.first-view {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  height: 800px;
+  color: #fff;
+  background-image: url("../assets/home/home_top.jpg");
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__wrapper {
+    margin: 0 auto;
+    @media (max-width: 1024px) {
+      padding: 0 20px;
+    }
+    text-align: center;
+  }
+
+  &__content {
+    font-size: 18px;
+  }
+
+  &__wordmark {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    margin: 0;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    line-height: 1.7;
+    color: rgba(#fff, 0.88);
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    height: 30px;
+    font-family: $font-baskervville;
+    font-size: 20px;
+    letter-spacing: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 400;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    padding: 0.95rem 2.8rem;
+    width: fit-content;
+    transition: background-color 0.3s ease, color 0.3s ease,
+      border-color 0.3s ease;
+
+    &:hover,
+    &:focus-visible {
+      border-color: rgba(#fff, 1);
+      background-color: rgba(#fff, 0.12);
+      color: #fff;
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba(#fff, 0.75);
+      outline-offset: 3px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__content {
+      max-width: 28rem;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__cta {
+      width: 100%;
+      max-width: 18rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    min-height: clamp(30rem, 95vh, 40rem);
+    padding: clamp(6rem, 16vh, 8rem) 0 clamp(4rem, 12vh, 6rem);
+
+    &::before {
+      background: linear-gradient(
+        140deg,
+        rgba($color-brand-black, 0.78) 0%,
+        rgba($color-brand-black, 0.6) 55%,
+        rgba($color-brand-black, 0.3) 100%
+      );
+    }
+
+    &__eyebrow {
+      letter-spacing: 0.3em;
+    }
+  }
+}
+
+// professional makeup & hairstyle artist section
+.professional-makeup-hairstyle {
+  background: $color-pale-white;
+  padding: 100px 0;
+  color: $color-brand-black;
+
+  &__wrapper {
+    width: 60%;
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(2.5rem, 6vw, 5rem);
+  }
+
+  &__portrait-wrapper {
+    position: relative;
+  }
+
+  &__portrait {
+    display: block;
+    height: 510px;
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: $color-brand-black;
+  }
+
+  &__monogram {
+    width: 60px;
+    margin-bottom: 20px;
+    height: auto;
+  }
+
+  &__heading {
+    margin: 0;
+    font-size: clamp(2.25rem, 4vw, 3.5rem);
+    font-family: $font-baskervville;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 20px;
+    color: $color-brand-black;
+  }
+
+  &__description {
+    margin: 0;
+    max-width: 29rem;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: rgba($color-brand-black, 0.74);
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 2.5rem);
+    margin-top: clamp(0.5rem, 2vw, 1.75rem);
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  &__button {
+    padding: 20px 30px;
+    font-family: $font-baskervville;
+    font-size: 20px;
+    font-weight: 400;
+    border: 1px solid $color-brown;
+    color: $color-bold-main;
+    text-decoration: none;
+    background: transparent;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-dark-pink;
+      border-color: $color-dark-pink;
+      color: $color-pale-white;
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba($color-bold-main, 0.35);
+      outline-offset: 4px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__wrapper {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+
+    &__content {
+      align-items: center;
+    }
+
+    &__description {
+      width: 80%;
+    }
+
+    &__cta {
+      flex-direction: row-reverse;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    &__button {
+      width: 100%;
+    }
+  }
+}
+
+// our brands section
+.our-brands {
+  background: $color-pale-white;
+
+  &__wrapper {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2rem, 4vw, 3rem);
+  }
+
+  &__heading {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.5rem, 3.5vw, 3rem);
+  }
+
+  &__line {
+    display: block;
+    height: 1px;
+    width: 38%;
+    @media (max-width: 1024px) {
+      width: 30%;
+    }
+    background-color: rgba($color-brand-black, 0.18);
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $font-avenir;
+    font-size: 20px;
+    font-weight: 400;
+    color: $color-bold-main;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 0;
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+// you are a star section
+
+// quotes section
+
+// makeup & hairstyle section
+
+// makeup 101 section
+
+// diy beauty corner section
+
+// lets talk section
+.lets-talk {
+  background: $color-pale-white;
+  padding: 120px 0;
+
+  &__intro {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    font-size: 80px;
+    @media (max-width: 1024px) {
+      font-size: 40px;
+    }
+
+    line-height: 130%;
+    letter-spacing: 13%;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: $color-bold-main;
+  }
+
+  &__description {
+    font-size: 18px;
+    color: $color-brand-black;
+    padding: 0 30%;
+    @media (max-width: 1024px) {
+      padding: 0 10%;
+    }
+  }
+
+  &__card {
+    margin: 0 20%;
+    @media (max-width: 1024px) {
+      margin: 0;
+    }
+
+    background: $color-light-pink;
+    padding: 40px 5%;
+  }
+
+  &__card-title {
+    text-align: center;
+    padding-bottom: 6px;
+    font-weight: 400;
+    border-bottom: 1px solid $color-brand-black;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.75rem, 3vw, 2.5rem);
+  }
+}
+
+.form-section {
+  border: none;
+
+  legend {
+    font-family: $font-baskervville;
+    color: $color-brand-black;
+    font-size: 32px;
+    font-weight: 400;
+  }
+}
+
+.option-group--toggle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+  gap: 6px;
+}
+
+.toggle {
+  input {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  // Wedding, Party, Photoshoot
+  span {
+    display: block;
+    position: relative;
+    font-size: 20px;
+    font-weight: 400;
+    background: #fff;
+    font-family: $font-baskervville;
+    color: $color-dark-grey;
+    padding: 17px 16px;
+    padding-right: 54px;
+    border: 1px solid transparent;
+    text-transform: capitalize;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../assets/home/check.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateY(-50%) scale(0.85);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    opacity: 0;
+  }
+
+  input:checked + span {
+    background: #fff;
+    color: $color-bold-main;
+    border-color: rgba($color-bold-main, 0.55);
+    box-shadow: 0 0 0 1.5px rgba($color-accent-pink, 0.35);
+  }
+
+  input:checked + span::after {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+
+  span:hover {
+    border-color: rgba($color-bold-main, 0.55);
+  }
+}
+
+.form-grid {
+  display: grid;
+  gap: clamp(1.75rem, 3vw, 2.5rem);
+
+  @media (min-width: 720px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+}
+
+.field {
+  display: block;
+  position: relative;
+  isolation: isolate;
+
+  input,
+  select {
+    border: 1px solid rgba($color-bold-main, 0.28);
+    width: 100%;
+    padding: 0.9rem 1rem;
+    background-color: rgba(#fff, 0.98);
+    color: rgba($color-brand-black, 0.9);
+    font-size: 1rem;
+    letter-spacing: 0.01rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  input::placeholder {
+    color: rgba($color-brand-black, 0.45);
+  }
+
+  input:focus,
+  select:focus {
+    border-color: $color-bold-main;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($color-bold-main, 0.13);
+    background-color: rgba(#fff, 0.99);
+  }
+
+  &.is-disabled {
+    input,
+    select {
+      background-color: rgba($color-paper-white, 0.6);
+      color: rgba($color-brand-black, 0.4);
+      cursor: not-allowed;
+    }
+  }
+}
+
+.field--date,
+.field--select {
+  position: relative;
+
+  select {
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 1.15rem center;
+    padding-right: 3rem;
+  }
+}
+
+.checkbox,
+.radio {
+  display: inline-flex;
+  align-items: center;
+  font-size: 18px;
+  color: rgba($color-brand-black, 0.82);
+  cursor: pointer;
+
+  input {
+    width: 17px;
+    height: 17px;
+    border: 1px solid $color-brown;
+    appearance: none;
+    display: grid;
+    place-items: center;
+    background: #fff;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  input:checked {
+    background: $color-brown;
+  }
+
+  input[type="radio"] {
+    border-radius: 50%;
+  }
+
+  input[type="checkbox"]:checked::after {
+    width: 8px;
+    height: 8px;
+    background: #fff;
+  }
+}
+
+.contact-method {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.form-button {
+  display: inline-flex;
+  align-items: center;
+  color: #5e4a49;
+  justify-content: center;
+  min-width: 160px;
+  height: 62px;
+  border: 1px solid #5e4a49;
+  font-family: $font-baskervville, serif;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  background: transparent;
+
+  &:hover {
+    border: 1px solid $color-dark-pink;
+    color: $color-pale-white;
+    background-color: $color-dark-pink;
+  }
+}
+
+.form-feedback {
+  min-height: 1.25rem;
+  font-size: 0.95rem;
+  color: $color-bold-main;
+  text-align: center;
+  font-weight: 500;
+
+  &.is-success {
+    color: #2f7a4d;
+  }
+
+  &.is-error {
+    color: #b65050;
+  }
+}

@@ -7,7 +7,287 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <main></main>
+    <main>
+      <!-- first view section -->
+      <section id="first-view" class="first-view">
+        <div class="first-view__wrapper">
+          <div class="first-view__content">
+            <img
+              src="./assets/home/typo_carla_beauty.svg"
+              alt="Carla Beauty"
+              class="first-view__wordmark"
+            />
+            <p class="first-view__description">
+              Vancouver&apos;s go-to makeup and hairstyle, with a Brazilian
+              twist
+            </p>
+            <p>
+              <a class="first-view__button" href="#lets-talk"
+                >Free Consultation</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- professional makeup & hairstyle artist section -->
+      <section
+        id="professional-makeup-hairstyle"
+        class="professional-makeup-hairstyle"
+      >
+        <div class="professional-makeup-hairstyle__wrapper">
+          <div class="professional-makeup-hairstyle__media">
+            <div class="professional-makeup-hairstyle__portrait-wrapper">
+              <img
+                class="professional-makeup-hairstyle__portrait"
+                src="./assets/home/woman_with_frame.png"
+                alt="Carla Beatriz, official certified professional"
+              />
+            </div>
+          </div>
+          <div class="professional-makeup-hairstyle__content">
+            <img
+              class="professional-makeup-hairstyle__monogram"
+              src="./assets/home/pink_logo.svg"
+              alt="Carla Beauty monogram"
+            />
+            <h2 class="professional-makeup-hairstyle__heading">
+              Professional Makeup &amp; Hairstyle Artist
+            </h2>
+            <p class="professional-makeup-hairstyle__description">
+              10+ years creating stunning looks for weddings and special
+              occasions.
+            </p>
+            <div class="professional-makeup-hairstyle__cta">
+              <a class="professional-makeup-hairstyle__button" href="#about"
+                >About Me</a
+              >
+              <img
+                class="professional-makeup-hairstyle__signature"
+                src="./assets/home/typo_carla_beatriz.svg"
+                alt="Carla Beatriz signature"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- our brands section -->
+      <section id="our-brands" class="our-brands">
+        <div class="our-brands__wrapper">
+          <div class="our-brands__heading">
+            <span class="our-brands__line" aria-hidden="true"></span>
+            <h3 class="our-brands__title">Our Brands</h3>
+            <span class="our-brands__line" aria-hidden="true"></span>
+          </div>
+
+          <div class="our-brands__grid" aria-label="Beauty brands">
+            <div class="our-brands__item">
+              <img src="./assets/home/brand_mac.svg" alt="MAC" />
+            </div>
+            <div class="our-brands__item">
+              <img src="./assets/home/brand_lancome.svg" alt="Lancôme" />
+            </div>
+            <div class="our-brands__item">
+              <img src="./assets/home/brand_inglot.svg" alt="Inglot" />
+            </div>
+            <div class="our-brands__item">
+              <img
+                src="./assets/home/brand_lauramercier.svg"
+                alt="Laura Mercier"
+              />
+            </div>
+            <div class="our-brands__item">
+              <img
+                src="./assets/home/brand_charlottetilbury.svg"
+                alt="Charlotte Tilbury"
+              />
+            </div>
+            <div class="our-brands__item">
+              <img src="./assets/home/brand_tarte.svg" alt="tarte" />
+            </div>
+            <div class="our-brands__item">
+              <img
+                src="./assets/home/brand_anastasia.svg"
+                alt="Anastasia Beverly Hills"
+              />
+            </div>
+            <div class="our-brands__item">
+              <img src="./assets/home/brand_kryolan.svg" alt="Kryolan" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- you are a star section -->
+      <section id="you-are-a-star" class="you-are-a-star"></section>
+
+      <!-- quotes section -->
+      <section id="quotes" class="quotes"></section>
+
+      <!-- makeup & hairstyle section -->
+      <section id="makeup-hairstyle" class="makeup-hairstyle"></section>
+
+      <!-- makeup 101 section -->
+      <section id="makeup-101" class="makeup-101"></section>
+
+      <!-- diy beauty corner section -->
+      <section id="diy-beauty-corner" class="diy-beauty-corner"></section>
+
+      <!-- lets talk section -->
+      <section id="lets-talk" class="lets-talk">
+        <div class="lets-talk__intro">
+          <h1 class="lets-talk__title">Let’s Talk</h1>
+          <p class="lets-talk__description">
+            Check availability, pricing, and schedule a meeting for your special
+            day or our academy services.
+          </p>
+        </div>
+
+        <div class="lets-talk__card">
+          <h5 class="lets-talk__card-title">Services</h5>
+          <form id="letsTalkForm" class="lets-talk__form" novalidate>
+            <fieldset class="form-section" data-section="event-type">
+              <legend>Event Type</legend>
+              <div
+                class="option-group option-group--toggle"
+                role="radiogroup"
+                aria-label="Event Type"
+              >
+                <label class="toggle">
+                  <input
+                    type="radio"
+                    name="eventType"
+                    value="Wedding"
+                    checked
+                  />
+                  <span>Wedding</span>
+                </label>
+                <label class="toggle">
+                  <input type="radio" name="eventType" value="Party" />
+                  <span>Party</span>
+                </label>
+                <label class="toggle">
+                  <input type="radio" name="eventType" value="Photoshoot" />
+                  <span>Photoshoot</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-grid">
+              <fieldset class="form-section" data-section="event-date">
+                <legend>Event Date</legend>
+                <label class="field field--date">
+                  <input
+                    type="date"
+                    name="eventDate"
+                    placeholder="Select Date"
+                    aria-describedby="eventDateUndecided"
+                  />
+                </label>
+                <label class="checkbox">
+                  <input
+                    type="checkbox"
+                    id="eventDateUndecided"
+                    name="eventDateUndecided"
+                  />
+                  <span>Not decided</span>
+                </label>
+              </fieldset>
+
+              <fieldset class="form-section" data-section="event-time">
+                <legend>Event Time</legend>
+                <label class="field field--select">
+                  <select
+                    name="eventTime"
+                    aria-describedby="eventTimeUndecided"
+                  >
+                    <option value="Full day" selected>Full day</option>
+                    <option value="Morning">Morning</option>
+                    <option value="Afternoon">Afternoon</option>
+                    <option value="Evening">Evening</option>
+                  </select>
+                </label>
+                <label class="checkbox">
+                  <input
+                    type="checkbox"
+                    id="eventTimeUndecided"
+                    name="eventTimeUndecided"
+                  />
+                  <span>Not decided</span>
+                </label>
+              </fieldset>
+            </div>
+
+            <fieldset class="form-section" data-section="name">
+              <legend>Name</legend>
+              <label class="field">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+              </label>
+            </fieldset>
+
+            <fieldset class="form-section" data-section="contact">
+              <legend>Contact</legend>
+              <div class="contact-method">
+                <label class="radio">
+                  <input
+                    type="radio"
+                    name="contactMethod"
+                    value="Call"
+                    checked
+                  />
+                  <span>Call</span>
+                </label>
+                <div class="contact-phone">
+                  <label>
+                    <select name="countryCode" aria-label="Country code">
+                      <option value="+1" selected>+1</option>
+                      <option value="+44">+44</option>
+                      <option value="+81">+81</option>
+                      <option value="+63">+63</option>
+                    </select>
+                  </label>
+                  <label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="Your mobile number"
+                    />
+                  </label>
+                </div>
+              </div>
+
+              <label class="radio">
+                <input type="radio" name="contactMethod" value="WhatsApp" />
+                <span>WhatsApp</span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="contactMethod" value="SMS" />
+                <span>SMS</span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="contactMethod" value="Email" />
+                <span>Email</span>
+              </label>
+            </fieldset>
+
+            <div class="form-actions">
+              <button type="submit" class="form-button">Submit</button>
+              <p class="form-feedback" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- EmailJS CDN. Replace placeholders in app.js with your actual keys before deploying. -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
     <script src="./app.js"></script>
   </body>
 </html>
