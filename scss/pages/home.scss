@@ -457,168 +457,6 @@
   }
 }
 
-// makeup 101 section
-.makeup-101 {
-  background: $color-pale-white;
-  margin: 0 5%;
-  @media (max-width: 1024px) {
-    margin: 0;
-  }
-
-  &__title {
-    background: $color-light-pink;
-    text-align: center;
-    font-family: $font-baskervville;
-    font-size: 80px;
-    padding: 60px;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.28em;
-    color: $color-bold-main;
-  }
-
-  &__wrapper {
-    background: $color-light-pink;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: clamp(2.5rem, 5vw, 4rem);
-    align-items: stretch;
-
-    @media (max-width: 980px) {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  &__content {
-    padding: clamp(2.5rem, 5vw, 3.5rem);
-    display: flex;
-    flex-direction: column;
-    gap: clamp(2rem, 4vw, 3rem);
-  }
-
-  &__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: clamp(1.5rem, 3vw, 2.25rem);
-  }
-
-  &__cta {
-    align-self: flex-start;
-    padding: 0.9rem 2.8rem;
-    border: 1px solid $color-bold-main;
-    font-family: $font-baskervville;
-    font-size: 1.05rem;
-    color: $color-bold-main;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-
-    &:hover,
-    &:focus-visible {
-      background-color: $color-bold-main;
-      color: $color-pale-white;
-    }
-
-    &:focus-visible {
-      outline: 2px solid rgba($color-bold-main, 0.35);
-      outline-offset: 4px;
-    }
-  }
-
-  &__media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &__frame {
-    position: relative;
-    position: relative;
-    display: inline-block;
-
-    img {
-      display: block;
-      width: 407px;
-      height: 530px;
-      object-fit: cover;
-      @media (max-width: 1024px) {
-        width: 100vw;
-        height: auto;
-      }
-    }
-  }
-
-  &__frame::after {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    box-shadow: inset 0 0 0 1px white;
-  }
-}
-
-.class-card {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  gap: clamp(1rem, 2vw, 1.5rem);
-  align-items: start;
-  color: $color-brand-black;
-
-  &__icon {
-    width: clamp(32px, 4vw, 40px);
-    height: clamp(32px, 4vw, 40px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-  }
-
-  &__body {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  &__title {
-    margin: 0;
-    font-family: $font-baskervville;
-    font-size: clamp(1.3rem, 2.2vw, 1.6rem);
-    color: $color-bold-main;
-  }
-
-  &__description {
-    margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    color: rgba($color-brand-black, 0.75);
-  }
-
-  &__arrow {
-    font-size: 60px;
-    font-weight: 400;
-    color: inherit;
-  }
-
-  @media (max-width: 720px) {
-    grid-template-columns: minmax(0, 1fr);
-    justify-items: center;
-    text-align: center;
-
-    &__link {
-      align-self: center;
-    }
-  }
-}
-
 // makeup & hairstyle section
 .makeup-hairstyle {
   background: $color-pale-white;
@@ -643,17 +481,21 @@
   &__title {
     margin: 0;
     font-family: $font-baskervville;
-    font-size: clamp(3rem, 6vw, 5rem);
-    letter-spacing: 0.38em;
+    font-size: 80px;
+    font-weight: 100;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: $color-bold-main;
+    @media (max-width: 1024px) {
+      font-size: 40px;
+    }
   }
 
   &__divider {
     display: block;
-    width: clamp(6rem, 10vw, 7rem);
+    width: 200px;
     height: 1px;
-    background-color: rgba($color-bold-main, 0.35);
+    background-color: $color-dark-pink;
   }
 
   &__description {
@@ -668,14 +510,12 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.85rem 2.6rem;
-    border: 1px solid rgba($color-brand-black, 0.35);
-    color: $color-brand-black;
+    padding: 20px 20px;
+    border: 1px solid $color-dark-pink;
+    color: $color-dark-pink;
     text-decoration: none;
     font-family: $font-baskervville;
     font-size: 1.1rem;
-    transition: background-color 0.3s ease, color 0.3s ease,
-      border-color 0.3s ease;
 
     &:hover,
     &:focus-visible {
@@ -696,7 +536,8 @@
     gap: clamp(1.5rem, 4vw, 2.75rem);
 
     @media (max-width: 960px) {
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
     }
   }
 }
@@ -705,15 +546,15 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 5px;
+  @media (max-width: 1024px) {
+    padding: 0 8%;
+  }
 
   &__media {
     position: relative;
-    overflow: hidden;
     width: 100%;
     aspect-ratio: 3 / 4;
-    box-shadow: 0 24px 48px rgba($color-brand-black, 0.12);
-    border: 1px solid rgba($color-bold-main, 0.2);
 
     img {
       width: 100%;
@@ -725,48 +566,414 @@
 
   &__label {
     position: absolute;
-    bottom: clamp(1.25rem, 3vw, 2rem);
-    left: clamp(1.25rem, 3vw, 2rem);
+    bottom: 50px;
+    left: -40px;
     margin: 0;
     font-family: $font-baskervville;
-    font-size: clamp(2.2rem, 3.2vw, 3.6rem);
-    letter-spacing: 0.18em;
+    font-size: 70px;
+    font-weight: 400;
     text-transform: capitalize;
-    color: $color-bold-main;
+    color: $color-light-pink;
     text-align: left;
     pointer-events: none;
-  }
-
-  &:hover img,
-  &:focus-within img {
-    transform: scale(1.04);
-  }
-
-  &--wedding {
-    .service-card__media {
-      border: 2px solid rgba($color-accent-pink, 0.6);
+    @media (max-width: 1024px) {
+      text-align: center;
+      font-size: 50px;
+      left: 80px;
     }
+  }
 
-    @media (min-width: 961px) {
-      &::after {
-        content: "";
-        position: absolute;
-        top: -28px;
-        left: -28px;
-        right: -28px;
-        bottom: -28px;
-        border: 1px solid rgba($color-accent-pink, 0.65);
-        z-index: -1;
-        transform: translate(38px, -38px);
-        pointer-events: none;
-      }
+  &--party {
+    @media (max-width: 1024px) {
+      order: 2;
+    }
+  }
+  &--wedding {
+    @media (max-width: 1024px) {
+      order: 1;
+    }
+  }
+  &--photoshoot {
+    @media (max-width: 1024px) {
+      order: 3;
     }
   }
 }
 
 // makeup 101 section
+.makeup-101 {
+  background: $color-pale-white;
+  margin: 0 5%;
+  @media (max-width: 1024px) {
+    margin: 0;
+  }
+
+  &__title {
+    background: $color-light-pink;
+    text-align: center;
+    font-family: $font-baskervville;
+    font-weight: 100;
+    font-size: 80px;
+    padding: 60px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: $color-bold-main;
+    @media (max-width: 1024px) {
+      font-size: 40px;
+      padding: 60px 0;
+    }
+  }
+
+  &__wrapper {
+    background: $color-light-pink;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    align-items: stretch;
+    padding: 60px 5%;
+
+    @media (max-width: 980px) {
+      grid-template-columns: 1fr;
+      padding: 0;
+    }
+  }
+
+  &__content {
+    h3 {
+      font-size: 32px;
+      font-weight: 400;
+    }
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 3vw, 2.25rem);
+  }
+
+  &__cta {
+    align-self: flex-start;
+    margin-top: 20px;
+    padding: 20px 30px;
+    border: 1px solid $color-bold-main;
+    font-family: $font-baskervville;
+    font-size: 18px;
+    color: $color-bold-main;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-bold-main;
+      color: $color-pale-white;
+    }
+
+    @media (max-width: 1024px) {
+      margin: 20px auto;
+      width: 70%;
+      text-align: center;
+    }
+  }
+
+  &__media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__frame {
+    position: relative;
+    position: relative;
+    display: inline-block;
+    height: 530px;
+    width: 407px;
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__frame::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    box-shadow: inset 0 0 0 1px white;
+  }
+}
+
+.class-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 30px;
+  align-items: start;
+  color: $color-brand-black;
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $font-baskervville;
+    font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+    color: $color-bold-main;
+  }
+
+  &__description {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba($color-brand-black, 0.75);
+    @media (max-width: 1024px) {
+      padding: 0 2%;
+    }
+  }
+
+  &__p {
+    display: none;
+    @media (max-width: 1024px) {
+      display: inline-flex;
+      align-items: center;
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    text-align: center;
+
+    &__link {
+      align-self: center;
+    }
+  }
+}
 
 // diy beauty corner section
+.diy-beauty-corner {
+  background: $color-pale-white;
+  padding-top: 80px;
+
+  &__wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(2.5rem, 6vw, 3.5rem);
+  }
+
+  &__header {
+    h2 {
+      font-weight: 100;
+      letter-spacing: 0.8;
+    }
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 1024px) {
+      h2 {
+        font-size: 32px;
+        font-weight: 100;
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $font-baskervville;
+    font-size: clamp(2.4rem, 4.5vw, 3.1rem);
+    color: $color-bold-main;
+    letter-spacing: 0.22em;
+  }
+
+  &__divider {
+    display: none;
+
+    @media (max-width: 1024px) {
+      display: block;
+      width: 300px;
+      height: 1px;
+      background: rgba($color-accent-pink, 1);
+    }
+  }
+
+  &__videos {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__track {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: center;
+    gap: 40px;
+    @media (max-width: 1024px) {
+      display: flex;
+      gap: 5px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 2.8rem;
+    border: 1px solid $color-bold-main;
+    font-family: $font-baskervville;
+    font-size: 1.05rem;
+    color: $color-bold-main;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-bold-main;
+      color: $color-pale-white;
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba($color-bold-main, 0.35);
+      outline-offset: 4px;
+    }
+  }
+}
+
+.video-card {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  width: 300px;
+  height: 300px;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba($color-brand-black, 0.65),
+      rgba($color-brand-black, 0.05)
+    );
+    pointer-events: none;
+  }
+
+  &__play {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    color: #f8f6f4;
+    display: grid;
+    place-items: center;
+    font-size: 1.9rem;
+    pointer-events: none;
+  }
+
+  &__caption {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: rgba(#fff, 0.92);
+  }
+}
+
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background: $color-brand-black;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  &.is-open {
+    display: flex;
+  }
+
+  &__dialog {
+    width: min(960px, 100%);
+    aspect-ratio: 16 / 9;
+    background: #000;
+    position: relative;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  &__close {
+    position: absolute;
+    top: -48px;
+    right: 0;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 2.2rem;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-accent-pink;
+    }
+  }
+}
 
 // lets talk section
 .lets-talk {

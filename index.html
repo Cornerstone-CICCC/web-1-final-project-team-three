@@ -292,7 +292,7 @@
             <a class="makeup-hairstyle__cta" href="#lets-talk">Get a Quote</a>
           </header>
 
-          <div class="makeup-hairstyle__services" aria-label="Makeup services">
+          <div class="makeup-hairstyle__services">
             <article class="service-card service-card--party">
               <div class="service-card__media">
                 <img
@@ -347,11 +347,14 @@
                     areas, all at your own pace.
                   </p>
                 </div>
-                <img
-                  src="./assets/home/arrow.svg"
-                  alt="Arrow right"
-                  class="class-card__arrow"
-                />
+                <div class="class-card__arrow-wrapper">
+                  <p class="class-card__p">View Class</p>
+                  <img
+                    src="./assets/home/arrow.svg"
+                    alt="Arrow right"
+                    class="class-card__arrow"
+                  />
+                </div>
               </li>
               <li class="class-card">
                 <div class="class-card__icon">
@@ -368,11 +371,14 @@
                     away!
                   </p>
                 </div>
-                <img
-                  src="./assets/home/arrow.svg"
-                  alt="Arrow right"
-                  class="class-card__arrow"
-                />
+                <div class="class-card__arrow-wrapper">
+                  <p class="class-card__p">View Class</p>
+                  <img
+                    src="./assets/home/arrow.svg"
+                    alt="Arrow right"
+                    class="class-card__arrow"
+                  />
+                </div>
               </li>
               <li class="class-card">
                 <div class="class-card__icon">
@@ -389,11 +395,14 @@
                     new friends in the process!
                   </p>
                 </div>
-                <img
-                  src="./assets/home/arrow.svg"
-                  alt="Arrow right"
-                  class="class-card__arrow"
-                />
+                <div class="class-card__arrow-wrapper">
+                  <p class="class-card__p">View Class</p>
+                  <img
+                    src="./assets/home/arrow.svg"
+                    alt="Arrow right"
+                    class="class-card__arrow"
+                  />
+                </div>
               </li>
             </ul>
             <a class="makeup-101__cta" href="#">All Classes</a>
@@ -410,7 +419,83 @@
       </section>
 
       <!-- diy beauty corner section -->
-      <section id="diy-beauty-corner" class="diy-beauty-corner"></section>
+      <section id="diy-beauty-corner" class="diy-beauty-corner">
+        <div class="diy-beauty-corner__wrapper">
+          <div class="diy-beauty-corner__header">
+            <h2 class="diy-beauty-corner__title">DIY Beauty Corner</h2>
+            <span class="diy-beauty-corner__divider" aria-hidden="true"></span>
+          </div>
+
+          <div class="diy-beauty-corner__videos" data-diy-slider>
+            <div class="diy-beauty-corner__track" data-diy-track>
+              <article
+                class="video-card"
+                data-video="https://www.youtube.com/embed/i_PjjXKNpA4"
+              >
+                <img
+                  src="./assets/home/woman3.png"
+                  alt="Makeup tutorial thumbnail"
+                />
+                <span class="video-card__overlay" aria-hidden="true"></span>
+                <span class="video-card__play" aria-hidden="true">▶</span>
+                <p class="video-card__caption">
+                  ✨Make up ✨ Be a queen in minutes
+                </p>
+              </article>
+
+              <article
+                class="video-card"
+                data-video="https://www.youtube.com/embed/DULfEcPR0Gc"
+              >
+                <img
+                  src="./assets/home/woman7.png"
+                  alt="Bridal makeup tutorial thumbnail"
+                />
+                <span class="video-card__overlay" aria-hidden="true"></span>
+                <span class="video-card__play" aria-hidden="true">▶</span>
+                <p class="video-card__caption">Produce a beautiful bride ✨</p>
+              </article>
+
+              <article
+                class="video-card"
+                data-video="https://www.youtube.com/embed/l0h3nAW13ao"
+              >
+                <img
+                  src="./assets/home/woman5.png"
+                  alt="Hair styling tutorial thumbnail"
+                />
+                <span class="video-card__overlay" aria-hidden="true"></span>
+                <span class="video-card__play" aria-hidden="true">▶</span>
+                <p class="video-card__caption">
+                  How to do stunning hair in 3 steps
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <a class="diy-beauty-corner__cta" href="#">More Beauty Tips</a>
+        </div>
+      </section>
+
+      <div class="video-modal" data-video-modal aria-hidden="true">
+        <div class="video-modal__dialog" role="dialog" aria-modal="true">
+          <button
+            type="button"
+            class="video-modal__close"
+            aria-label="Close video"
+            data-video-close
+          >
+            ×
+          </button>
+          <iframe
+            src=""
+            title="DIY beauty tutorial"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            data-video-frame
+          ></iframe>
+        </div>
+      </div>
 
       <!-- lets talk section -->
       <section id="lets-talk" class="lets-talk">
