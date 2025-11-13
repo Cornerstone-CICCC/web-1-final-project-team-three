@@ -1028,7 +1028,7 @@
   &__form {
     display: flex;
     flex-direction: column;
-    gap: clamp(1.75rem, 3vw, 2.5rem);
+    gap: 20px;
   }
 }
 
@@ -1119,24 +1119,20 @@
 
 .field {
   display: block;
-  position: relative;
-  isolation: isolate;
 
   input,
   select {
-    border: 1px solid rgba($color-bold-main, 0.28);
+    box-sizing: border-box;
+    border: 1px solid $color-dark-pink;
     width: 100%;
-    padding: 0.9rem 1rem;
-    background-color: rgba(#fff, 0.98);
-    color: rgba($color-brand-black, 0.9);
-    font-size: 1rem;
-    letter-spacing: 0.01rem;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease,
-      background-color 0.2s ease;
+    padding: 15px 20px;
+    background-color: #fff;
+    color: #888888;
+    font-size: 18px;
   }
 
   input::placeholder {
-    color: rgba($color-brand-black, 0.45);
+    color: #888888;
   }
 
   input:focus,
@@ -1169,12 +1165,48 @@
   }
 }
 
+.contact-phone {
+  display: flex;
+  align-items: center;
+
+  border: 1px solid $color-dark-pink;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.contact-phone select,
+.contact-phone input {
+  border: none;
+  outline: none;
+  padding: 15px 20px;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.contact-phone select {
+  flex-shrink: 0;
+  border-right: 1px solid #ccc;
+}
+
+.contact-phone input {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.contact-phone input::placeholder {
+  color: #a0a0a0;
+}
+
+.contact-phone label:last-child {
+  flex-grow: 1;
+}
+
 .checkbox,
 .radio {
   display: inline-flex;
   align-items: center;
   font-size: 18px;
-  color: rgba($color-brand-black, 0.82);
+  color: $color-brand-black;
   cursor: pointer;
 
   input {
@@ -1185,7 +1217,6 @@
     display: grid;
     place-items: center;
     background: #fff;
-    transition: background 0.2s ease, border-color 0.2s ease;
   }
 
   input:checked {
@@ -1201,6 +1232,65 @@
     height: 8px;
     background: #fff;
   }
+}
+
+.radio {
+  display: block;
+  margin-bottom: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio span {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+
+  padding-left: 30px;
+}
+
+.radio input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.radio span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-sizing: border-box;
+
+  background-color: #fff;
+  border: 2px solid #ddd;
+}
+
+.radio span::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: all 0.2s;
+}
+
+.radio input[type="radio"]:checked + span::before {
+  border-color: $color-dark-pink;
+}
+
+.radio input[type="radio"]:checked + span::after {
+  background-color: $color-dark-pink;
 }
 
 .contact-method {
@@ -1235,6 +1325,10 @@
     border: 1px solid $color-dark-pink;
     color: $color-pale-white;
     background-color: $color-dark-pink;
+  }
+
+  @media (max-width: 1024px) {
+    width: 90%;
   }
 }
 
