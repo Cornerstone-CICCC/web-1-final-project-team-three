@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+
+main {
+    h2 {
+        color: pink;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    h1 {
+        color: gold;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .bio {
+        background-color: pink;
+        color: gold;
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+            color: gold;
+        }
+
+        img {
+            width: 250px;
+            height: auto;
+            display: flex;
+            object-fit: cover;
+            margin-right: 40px;
+        }
+
+        .btn {
+            color: gold;
+        }
+    }
+}
