@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/portfolio.css">
+    <script src="https://kit.fontawesome.com/f8be10a101.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="wrapper navbar-desktop">
+            <ul class="nav-links">
+                <li><a href="">Home</a></li>
+                <li><a href="">My Work</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Classes</a></li>
+                <li><a href=""><img src="./assets/common/named_logo.svg" alt="" class="nav-logo"></a></li>
+                <li><a href="">Beauty Tips</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </nav>
+
+        <nav class="wrapper navbar-mobile">
+            <button class="hamburger-menu" aria-label="Toggle menu">
+                <img src="./assets/common/menu.svg" alt="menu" class="menu-icon">
+                <img src="./assets/common/close.svg" alt="close" class="close-icon">
+            </button>
+
+            <div class="mobile-logo">
+                <img src="./assets/common/named_logo.svg" alt="Carla Beauty" class="nav-logo">
+            </div>
+
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+
+            <ul class="nav-links">
+                <img src="./assets/common/named_logo.svg" alt="Carla Beauty" class="nav-logo logo-modal">
+                <li><a href="">Home</a></li>
+                <li><a href="">My Work</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Classes</a></li>
+                <li><a href="">Beauty Tips</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+
+                <div class="socials">
+                    <a href=""><img src="./assets/common/phone.svg" alt=""></a>
+                    <a href=""><img src="./assets/common/whatsapp.svg" alt=""></a>
+                    <a href=""><img src="./assets/common/instagram.svg" alt=""></a>
+                </div>
+                <span>Expert Makeup and Hairstyle Studio</span>
+
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+        <section class=" main-hero">
+            <h1>MY WORK</h1>
+            <hr>
+            <p>With a decade of experience, each look highlights my passion for enhanching your individual beauty</p>
+        </section>
+        <section class=" main-content">
+            <div class="main-content-buttons">
+                <button class="selected">Makeup</button>
+                <button>Hairstyle</button>
+            </div>
+            <div class="makeup-images">
+                <img src="./assets/portfolio/Img-1.png" alt="">
+                <img src="./assets/portfolio/Img-2.png" alt="">
+                <img src="./assets/portfolio/Img-3.png" alt="">
+                <img src="./assets/portfolio/Img-4.png" alt="">
+                <img src="./assets/portfolio/Img-5.png" alt="">
+                <img src="./assets/portfolio/Img-6.png" alt="">
+                <img src="./assets/portfolio/Img-7.png" alt="">
+                <img src="./assets/portfolio/Img-8.png" alt="">
+                <img src="./assets/portfolio/Img-9.png" alt="">
+            </div>
+            <div class="hairstyle-images">
+                <img src="./assets/portfolio/Img-10.png" alt="">
+                <img src="./assets/portfolio/Img-11.png" alt="">
+                <img src="./assets/portfolio/Img-12.png" alt="">
+                <img src="./assets/portfolio/Img-13.png" alt="">
+                <img src="./assets/portfolio/Img-14.png" alt="">
+                <img src="./assets/portfolio/Img-15.png" alt="">
+                <img src="./assets/portfolio/Img-16.png" alt="">
+                <img src="./assets/portfolio/Img-17.png" alt="">
+                <img src="./assets/portfolio/Img-18.png" alt="">
+            </div>
+
+            <button class="btn-more">View More</button>
+        </section>
+    </main>
+    <footer class="wrapper">
+        <div class="footer-top">
+            <img src="./assets/common/named_logo.svg" alt="">
+            <span>Exper Makeup and Hairstyle Studio</span>
+            <div class="socials">
+                <a href=""><img src="./assets/common/phone.svg" alt=""></a>
+                <a href=""><img src="./assets/common/whatsapp.svg" alt=""></a>
+                <a href=""><img src="./assets/common/instagram.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">My Work</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Classes</a></li>
+                <li><a href="">Beauty Tips</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <span>Copyright 2024, Carla Beauty</span>
+    </footer>
+</body>
+
+</html>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const logo = document.querySelector('.nav-logo');
+        const originalSrc = logo.getAttribute('src');
+        const scrolledSrc = './assets/common/logo.svg';
+        const threshold = 50;
+
+        const pre = new Image();
+        pre.src = scrolledSrc;
+
+        let lastState = 'top';
+        window.addEventListener('scroll', function () {
+            const state = window.scrollY > threshold ? 'scrolled' : 'top';
+            if (state === lastState) return;
+            lastState = state;
+
+            logo.style.transition = 'opacity 3s ease';
+            logo.style.opacity = '0';
+            setTimeout(() => {
+                logo.setAttribute('src', state === 'scrolled' ? scrolledSrc : originalSrc);
+                logo.style.opacity = '1';
+            }, 160);
+        });
+
+        const hamburgerMenu = document.querySelector('.navbar-mobile .hamburger-menu');
+        const navLinks = document.querySelector('.navbar-mobile .nav-links');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            hamburgerMenu.classList.toggle('open');
+            document.body.classList.toggle('no-scroll');
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const btns = document.querySelectorAll(".main-content-buttons button");
+        const makeup = document.querySelector(".makeup-images");
+        const hairstyle = document.querySelector(".hairstyle-images");
+
+        btns[0].addEventListener("click", () => {
+            btns[0].classList.add("selected");
+            btns[1].classList.remove("selected");
+
+            makeup.style.display = "grid";
+            hairstyle.style.display = "none";
+        });
+
+        btns[1].addEventListener("click", () => {
+            btns[1].classList.add("selected");
+            btns[0].classList.remove("selected");
+
+            makeup.style.display = "none";
+            hairstyle.style.display = "grid";
+        });
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+        const btnMore = document.querySelector(".btn-more");
+        const makeupGallery = document.querySelector(".makeup-images");
+        const hairstyleGallery = document.querySelector(".hairstyle-images");
+
+        btnMore.addEventListener("click", () => {
+            const active = makeupGallery.style.display !== "none" ? makeupGallery : hairstyleGallery;
+
+            active.classList.toggle("expanded");
+
+            btnMore.textContent = active.classList.contains("expanded")
+                ? "Show Less"
+                : "View More";
+        });
+    });
+</script>
