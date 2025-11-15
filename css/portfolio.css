@@ -1,9 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@font-face {
+  font-family: "Avenir";
+  src: url(../assets/common/Avenir\ Regular.ttf) format("truetype");
 }
-
 .wrapper {
   width: 100%;
   max-width: 1440px;
@@ -18,6 +16,9 @@ header {
   top: 0;
   left: 0;
   z-index: 999;
+}
+header a {
+  font-family: "Baskervville";
 }
 
 /* DESKTOP NAVBAR */
@@ -157,6 +158,96 @@ header {
   height: 18px;
 }
 
+@media (max-width: 1200px) {
+  header {
+    font-size: 16px;
+  }
+  .navbar-desktop .nav-logo {
+    width: 6.25rem;
+  }
+  .navbar-desktop .nav-links li a {
+    font-size: 1.2rem;
+  }
+  .navbar-desktop .nav-links {
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 901px) {
+  .navbar-desktop {
+    display: none;
+  }
+  .navbar-mobile {
+    display: flex;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 2rem;
+}
+footer .footer-top {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  gap: 1rem;
+}
+footer .footer-top .socials {
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  gap: 1.5rem;
+}
+footer .footer-top span {
+  font-family: "Avenir";
+}
+footer .footer-bottom {
+  border-top: 0.5px #191919 solid;
+  border-bottom: 0.5px #191919 solid;
+  padding: 26px 0px;
+  width: 100%;
+}
+footer .footer-bottom ul {
+  display: flex;
+  gap: 4rem;
+  padding: 0px 4rem;
+  justify-content: center;
+}
+footer .footer-bottom ul li {
+  list-style: none;
+}
+footer .footer-bottom ul li a {
+  text-decoration: none;
+  color: #a06b67;
+  font-size: 1.25rem;
+  line-height: 150%;
+}
+footer span {
+  color: #a06b67;
+  font-family: "Avenir";
+}
+
+@media (max-width: 901px) {
+  footer .footer-bottom {
+    width: 100%;
+  }
+  footer .footer-bottom ul {
+    padding: 0px;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    max-height: 180px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* PORTFOLIO STYLES */
 .main-hero {
   background-color: #f8f6f4;
@@ -172,6 +263,7 @@ header {
   line-height: 130%;
   letter-spacing: 13%;
   font-weight: 400;
+  font-family: "Baskervville";
 }
 .main-hero hr {
   width: 200px;
@@ -183,6 +275,7 @@ header {
   line-height: 150%;
   max-width: 585px;
   text-align: center;
+  font-family: "Avenir";
 }
 
 .main-content {
@@ -200,10 +293,10 @@ header {
   padding-top: 3rem;
   margin-bottom: 3rem;
   border-bottom: 1px #a3a3a3 solid;
-  width: 484px;
   position: relative;
 }
 .main-content-buttons button {
+  font-family: "Baskervville";
   border: none;
   font-size: 2rem;
   font-weight: 400;
@@ -257,81 +350,15 @@ header {
   margin-top: 60px;
   margin-bottom: 130px;
   font-size: 1.25rem;
+  font-family: "Baskervville";
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 0;
-  gap: 2rem;
-}
-footer .footer-top {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  gap: 1rem;
-}
-footer .footer-top .socials {
-  width: fit-content;
-  margin: auto;
-  display: flex;
-  gap: 1.5rem;
-}
-footer .footer-bottom {
-  border-top: 0.5px #191919 solid;
-  border-bottom: 0.5px #191919 solid;
-  padding: 26px 0px;
-}
-footer .footer-bottom ul {
-  display: flex;
-  gap: 4rem;
-  padding: 0px 4rem;
-}
-footer .footer-bottom ul li {
-  list-style: none;
-}
-footer .footer-bottom ul li a {
-  text-decoration: none;
-  color: #a06b67;
-  font-size: 1.25rem;
-  line-height: 150%;
-}
-footer span {
-  color: #a06b67;
-}
-
-@media (max-width: 1200px) {
-  html {
-    font-size: 16px;
-  }
-  .navbar-desktop .nav-logo {
-    width: 6.25rem;
-  }
-  .navbar-desktop .nav-links li a {
-    font-size: 1.2rem;
-  }
-  .navbar-desktop .nav-links {
-    gap: 0.5rem;
-  }
-}
 @media (max-width: 901px) {
-  .navbar-desktop {
-    display: none;
-  }
-  .navbar-mobile {
-    display: flex;
-  }
   .main-content-buttons {
-    width: 90%;
     gap: 1em;
   }
   .main-content-buttons button {
     padding: 0.5rem;
-  }
-  footer .footer-bottom ul {
-    padding: 0px;
-    gap: 1rem;
   }
   .makeup-images,
   .hairstyle-images {
@@ -347,17 +374,6 @@ footer span {
   }
   .expanded img {
     display: block !important;
-  }
-  footer .footer-bottom {
-    width: 100%;
-  }
-  footer .footer-bottom ul {
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 20px;
-    max-height: 180px;
   }
 }
 

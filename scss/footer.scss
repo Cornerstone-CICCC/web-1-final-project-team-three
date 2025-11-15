@@ -1,0 +1,67 @@
+@use "./colors" as *;
+@use "./font" as *;
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 2rem;
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 1rem;
+
+    .socials {
+      width: fit-content;
+      margin: auto;
+      display: flex;
+      gap: 1.5rem;
+    }
+    span {
+      font-family: $font-avenir;
+    }
+  }
+  .footer-bottom {
+    border-top: 0.5px $color-brand-black solid;
+    border-bottom: 0.5px $color-brand-black solid;
+    padding: 26px 0px;
+    width: 100%;
+    ul {
+      display: flex;
+      gap: 4rem;
+      padding: 0px 4rem;
+      justify-content: center;
+    }
+    ul li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: $color-brown;
+        font-size: 1.25rem;
+        line-height: 150%;
+      }
+    }
+  }
+  span {
+    color: $color-brown;
+    font-family: $font-avenir;
+  }
+}
+@media (max-width: 901px) {
+  footer {
+    .footer-bottom {
+      width: 100%;
+      ul {
+        padding: 0px;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 20px;
+        max-height: 180px;
+      }
+    }
+  }
+}
