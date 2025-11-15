@@ -37,25 +37,26 @@
 
             <a href=""><i class="fa-brands fa-instagram"></i></a>
 
-            <ul class="nav-links">
+            <div class="menu-mobile">
                 <img src="./assets/common/named_logo.svg" alt="Carla Beauty" class="nav-logo logo-modal">
-                <li><a href="">Home</a></li>
-                <li><a href="">My Work</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Classes</a></li>
-                <li><a href="">Beauty Tips</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-
-                <div class="socials">
-                    <a href=""><img src="./assets/common/phone.svg" alt=""></a>
-                    <a href=""><img src="./assets/common/whatsapp.svg" alt=""></a>
-                    <a href=""><img src="./assets/common/instagram.svg" alt=""></a>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">My Work</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Classes</a></li>
+                    <li><a href="">Beauty Tips</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+                <div class="container-socials">
+                    <div class="socials-mobile">
+                        <a href=""><img src="./assets/common/phone.svg" alt=""></a>
+                        <a href=""><img src="./assets/common/whatsapp.svg" alt=""></a>
+                        <a href=""><img src="./assets/common/instagram.svg" alt=""></a>
+                    </div>
+                    <span>Expert Makeup and Hairstyle Studio</span>
                 </div>
-                <span>Expert Makeup and Hairstyle Studio</span>
-
-            </ul>
-
+            </div>
         </nav>
     </header>
     <main>
@@ -147,7 +148,7 @@
         });
 
         const hamburgerMenu = document.querySelector('.navbar-mobile .hamburger-menu');
-        const navLinks = document.querySelector('.navbar-mobile .nav-links');
+        const navLinks = document.querySelector('.navbar-mobile .menu-mobile');
 
         hamburgerMenu.addEventListener('click', () => {
             navLinks.classList.toggle('open');

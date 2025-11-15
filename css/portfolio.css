@@ -77,7 +77,7 @@ header {
   text-align: center;
 }
 .navbar-mobile .mobile-logo .nav-logo {
-  width: 90px;
+  width: 5.625rem;
   height: auto;
 }
 .navbar-mobile .hamburger-menu {
@@ -100,48 +100,59 @@ header {
 .navbar-mobile .hamburger-menu.open .close-icon {
   display: block;
 }
-.navbar-mobile .nav-links {
+.navbar-mobile .menu-mobile {
   position: fixed;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100vh;
   background-color: #fae9e7;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+.navbar-mobile .menu-mobile .logo-modal {
+  width: 95.6px;
+  height: 100px;
+}
+.navbar-mobile .menu-mobile ul {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  transition: left 0.3s ease;
   gap: 1.5rem;
-  z-index: 1000;
 }
-.navbar-mobile .nav-links .logo-modal {
-  margin-top: -220px;
-  margin-bottom: 200px;
-}
-.navbar-mobile .nav-links li {
+.navbar-mobile .menu-mobile ul li {
   list-style: none;
 }
-.navbar-mobile .nav-links li a {
+.navbar-mobile .menu-mobile ul li a {
   color: #a06b67;
   font-size: 2rem;
   text-decoration: none;
   line-height: 130%;
 }
-.navbar-mobile .nav-links.open {
+.navbar-mobile .menu-mobile.open {
   left: 0;
 }
 .navbar-mobile .fa-instagram {
   font-size: 2rem;
   color: #a06b67;
 }
-.navbar-mobile .socials {
+.navbar-mobile .container-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.navbar-mobile .container-socials .socials-mobile {
   display: flex;
   gap: 1.5rem;
-  margin-top: 56px;
-  margin-bottom: 27px;
 }
-.navbar-mobile .socials a img {
+.navbar-mobile .container-socials .socials-mobile a img {
   width: 18px;
   height: 18px;
 }
@@ -157,7 +168,7 @@ header {
 }
 .main-hero h1 {
   color: #a06b67;
-  font-size: 80px;
+  font-size: 5rem;
   line-height: 130%;
   letter-spacing: 13%;
   font-weight: 400;
@@ -168,7 +179,7 @@ header {
 }
 .main-hero p {
   font-weight: 300px;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 150%;
   max-width: 585px;
   text-align: center;
@@ -245,7 +256,7 @@ header {
   color: #a06b67;
   margin-top: 60px;
   margin-bottom: 130px;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 footer {
@@ -265,7 +276,7 @@ footer .footer-top .socials {
   width: fit-content;
   margin: auto;
   display: flex;
-  gap: 24px;
+  gap: 1.5rem;
 }
 footer .footer-bottom {
   border-top: 0.5px #191919 solid;
@@ -274,7 +285,7 @@ footer .footer-bottom {
 }
 footer .footer-bottom ul {
   display: flex;
-  gap: 80px;
+  gap: 4rem;
   padding: 0px 4rem;
 }
 footer .footer-bottom ul li {
@@ -283,19 +294,44 @@ footer .footer-bottom ul li {
 footer .footer-bottom ul li a {
   text-decoration: none;
   color: #a06b67;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 150%;
 }
 footer span {
   color: #a06b67;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+  .navbar-desktop .nav-logo {
+    width: 6.25rem;
+  }
+  .navbar-desktop .nav-links li a {
+    font-size: 1.2rem;
+  }
+  .navbar-desktop .nav-links {
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 901px) {
   .navbar-desktop {
     display: none;
   }
   .navbar-mobile {
     display: flex;
+  }
+  .main-content-buttons {
+    width: 90%;
+    gap: 1em;
+  }
+  .main-content-buttons button {
+    padding: 0.5rem;
+  }
+  footer .footer-bottom ul {
+    padding: 0px;
+    gap: 1rem;
   }
   .makeup-images,
   .hairstyle-images {

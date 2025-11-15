@@ -87,7 +87,7 @@ header {
     text-align: center;
 
     .nav-logo {
-      width: 90px;
+      width: 5.625rem;
       height: auto;
     }
   }
@@ -119,31 +119,39 @@ header {
     }
   }
 
-  .nav-links {
+  .menu-mobile {
     position: fixed;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100vh;
     background-color: $color-light-pink;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
     transition: left 0.3s ease;
-    gap: 1.5rem;
     z-index: 1000;
+
     .logo-modal {
-      margin-top: -220px;
-      margin-bottom: 200px;
+      width: 95.6px;
+      height: 100px;
     }
-    li {
-      list-style: none;
-      a {
-        color: $color-brown;
-        font-size: 2rem;
-        text-decoration: none;
-        line-height: 130%;
+    ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      li {
+        list-style: none;
+        a {
+          color: $color-brown;
+          font-size: 2rem;
+          text-decoration: none;
+          line-height: 130%;
+        }
       }
     }
 
@@ -155,15 +163,22 @@ header {
     font-size: 2rem;
     color: $color-brown;
   }
-  .socials {
+  .container-socials {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 1.5rem;
-    margin-top: 56px;
-    margin-bottom: 27px;
-  }
-  .socials a img {
-    width: 18px;
-    height: 18px;
+
+    .socials-mobile {
+      display: flex;
+      gap: 1.5rem;
+      a {
+        img {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
   }
 }
 
@@ -179,7 +194,7 @@ header {
 
   h1 {
     color: $color-brown;
-    font-size: 80px;
+    font-size: 5rem;
     line-height: 130%;
     letter-spacing: 13%;
     font-weight: 400;
@@ -190,7 +205,7 @@ header {
   }
   p {
     font-weight: 300px;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 150%;
     max-width: 585px;
     text-align: center;
@@ -268,7 +283,7 @@ header {
   color: $color-brown;
   margin-top: 60px;
   margin-bottom: 130px;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 footer {
@@ -287,7 +302,7 @@ footer {
       width: fit-content;
       margin: auto;
       display: flex;
-      gap: 24px;
+      gap: 1.5rem;
     }
   }
   .footer-bottom {
@@ -296,7 +311,7 @@ footer {
     padding: 26px 0px;
     ul {
       display: flex;
-      gap: 80px;
+      gap: 4rem;
       padding: 0px 4rem;
     }
     ul li {
@@ -304,7 +319,7 @@ footer {
       a {
         text-decoration: none;
         color: $color-brown;
-        font-size: 20px;
+        font-size: 1.25rem;
         line-height: 150%;
       }
     }
@@ -313,13 +328,44 @@ footer {
     color: $color-brown;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+  .navbar-desktop {
+    .nav-logo {
+      width: 6.25rem;
+    }
+    .nav-links li a {
+      font-size: 1.2rem;
+    }
+    .nav-links {
+      gap: 0.5rem;
+    }
+  }
+}
+@media (max-width: 901px) {
   .navbar-desktop {
     display: none;
   }
 
   .navbar-mobile {
     display: flex;
+  }
+  .main-content-buttons {
+    width: 90%;
+    gap: 1em;
+    button {
+      padding: 0.5rem;
+    }
+  }
+  footer {
+    .footer-bottom {
+      ul {
+        padding: 0px;
+        gap: 1rem;
+      }
+    }
   }
   .makeup-images,
   .hairstyle-images {
