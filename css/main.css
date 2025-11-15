@@ -1236,6 +1236,189 @@
   color: #b65050;
 }
 
+.title {
+  text-align: center;
+  padding: 60px 20px 80px;
+  background-color: #f8f6f4;
+}
+.title h3 {
+  color: #e3b6b1;
+  font-family: "Baskervville";
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  margin-bottom: 10px;
+}
+.title h1 {
+  color: #725a58;
+  font-family: "Baskervville";
+  letter-spacing: 0.15rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+.bio {
+  background-color: #fae9e7;
+  padding: 60px;
+}
+.bio .bio-container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.bio img {
+  width: 320px;
+  object-fit: cover;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.bio .bio-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  gap: 20px;
+  flex: 1;
+}
+.bio .bio-text h3 {
+  color: #725a58;
+  font-family: "Baskervville";
+  font-weight: 400;
+  margin: 0;
+}
+.bio .bio-text p {
+  font-family: "Avenir";
+  color: #191919;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-weight: 300;
+  margin: 0;
+}
+.bio .bio-text .btn {
+  font-family: "Avenir";
+  color: #725a58;
+  background: none;
+  border: 1px solid #725a58;
+  padding: 10px 24px;
+  cursor: pointer;
+  display: inline-block;
+  align-self: flex-start;
+  width: auto;
+}
+@media (max-width: 900px) {
+  .bio {
+    flex-direction: column;
+  }
+  .bio img {
+    margin-bottom: 20px;
+  }
+}
+
+.brands {
+  background-color: #f8f6f4;
+  padding: 80px 0;
+  text-align: center;
+}
+.brands .brands-container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 4vw, 3rem);
+}
+.brands h3 {
+  font-family: "Baskervville";
+  color: #725a58;
+  font-weight: 400;
+  margin: 0;
+}
+.brands .grid-brands {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 0;
+  justify-items: center;
+  align-items: center;
+}
+.brands .grid-brands img {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@media (max-width: 1024px) {
+  .brands .grid-brands {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.services-title {
+  text-align: center;
+  padding: 60px 20px 80px;
+  background-color: #f8f6f4;
+}
+.services-title h1 {
+  color: #725a58;
+  font-family: "Baskervville", serif;
+  letter-spacing: 0.15rem;
+  margin: 0;
+  font-weight: 400;
+}
+.services-title h1::after {
+  content: "";
+  display: block;
+  width: 340px;
+  height: 1.5px;
+  background-color: #e3b6b1;
+  margin: 1rem auto 1.5rem;
+}
+.services-title p {
+  font-family: "Avenir";
+  color: #191919;
+  margin-bottom: 20px;
+  font-weight: 300px;
+  margin: 0;
+}
+
+.services-container {
+  background-color: #fae9e7;
+  padding: 60px;
+}
+.services-container .section {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+}
+.services-container #wedding .bride-photo {
+  width: 100%;
+  max-width: 320px;
+  display: block;
+  object-fit: cover;
+}
+.services-container #wedding .dollar-time h3 {
+  color: #725a58;
+  font-family: "Baskervville";
+  font-weight: 400;
+  margin: 0;
+}
+.services-container #wedding .wedding-text h4 {
+  color: #725a58;
+  font-family: "Baskervville";
+  font-weight: 400;
+  margin: 0;
+}
+.services-container #wedding .wedding-text .btn {
+  font-family: "Avenir";
+  color: #725a58;
+  background: none;
+  border: 1px solid #725a58;
+  padding: 10px 24px;
+  cursor: pointer;
+  display: inline-block;
+  align-self: flex-start;
+  width: auto;
+}
 body {
   margin: 0;
   font-family: "Avenir";

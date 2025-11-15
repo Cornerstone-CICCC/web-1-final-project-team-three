@@ -1,3 +1,98 @@
-*{
-    box-sizing: border-box;
+@use "../colors" as *;
+@use "../font" as *;
+
+.services-title {
+    text-align: center;
+    padding: 60px 20px 80px;
+    background-color: $color-pale-white;
+
+    h1 {
+        color: $color-bold-main;
+        font-family: "Baskervville", serif;
+        letter-spacing: 0.15rem;
+        margin: 0;
+        font-weight: 400;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 340px;
+        height: 1.5px;
+        background-color: $color-accent-pink;
+        margin: 1rem auto 1.5rem;
+    }
 }
+
+    p {
+        font-family: $font-avenir;
+        color: $color-brand-black;
+        margin-bottom: 20px;
+        font-weight: 300px;
+        margin: 0;
+    }
+}
+
+.services-container {
+    background-color: $color-light-pink;
+    padding: 60px;
+
+    .section {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 320px minmax(0,1fr);
+        gap: 3rem;
+        align-items: start;
+
+    }
+
+    #wedding {
+
+        .bride-photo {
+            width: 100%;
+            max-width: 320px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .dollar-time {
+            h3 {
+            color: $color-bold-main;
+            font-family: $font-baskervville;
+            font-weight: 400;
+            margin: 0;
+            }
+        }
+
+        .wedding-text {
+
+            h4 {
+                color: $color-bold-main;
+                font-family: $font-baskervville;
+                font-weight: 400;
+                margin: 0;
+            }
+            .btn {
+                font-family: $font-avenir;
+                color: $color-bold-main;
+                background: none;
+                border: 1px solid $color-bold-main;
+                padding: 10px 24px;
+                cursor: pointer;
+                display: inline-block;
+                align-self: flex-start;
+                width: auto;
+            }
+        }
+    }
+
+    #party {
+
+    }
+
+    #shoot {
+        
+    }
+}
+
+
