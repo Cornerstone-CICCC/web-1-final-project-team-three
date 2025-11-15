@@ -1259,6 +1259,17 @@
   margin: 0;
   font-weight: 400;
 }
+@media (max-width: 600px) {
+  .title {
+    padding: 40px 10px 60px;
+  }
+  .title h3 {
+    font-size: 2rem;
+  }
+  .title h1 {
+    font-size: 2.5rem;
+  }
+}
 
 .bio {
   background-color: #fae9e7;
@@ -1310,38 +1321,27 @@
   width: auto;
 }
 @media (max-width: 900px) {
-  .bio .bio {
-    padding: 40px 0;
+  .bio {
+    padding: 40px 20px;
   }
-  .bio .bio .bio-container {
+  .bio .bio-container {
     flex-direction: column;
-    align-items: center;
-    text-align: left;
-    gap: 24px;
+    gap: 30px;
   }
-  .bio .bio img {
-    width: 100%;
-    max-width: 360px;
+  .bio img {
+    width: 80%;
+    max-width: 300px;
     height: auto;
-    margin: 0 auto 20px;
-    padding: 0;
   }
-  .bio .bio .bio-text {
-    max-width: 360px;
-    width: 100%;
-    gap: 16px;
+  .bio .bio-text {
+    align-items: flex-start;
+    text-align: left;
   }
-  .bio .bio .bio-text h3 {
-    font-size: 1.4rem;
-    line-height: 1.4;
+  .bio .bio-text h3 {
+    font-size: 1.5rem;
   }
-  .bio .bio .bio-text p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-  .bio .bio .bio-text .btn {
+  .bio .bio-text .btn {
     align-self: center;
-    padding: 10px 32px;
   }
 }
 
@@ -1371,8 +1371,22 @@
   align-items: center;
 }
 .brands .grid-brands img {
-  display: block;
-  max-width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 1024px) {
+  .brands .grid-brands {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 20px;
+  }
+}
+@media (max-width: 768px) {
+  .brands .grid-brands {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .services-title {
