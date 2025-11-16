@@ -1,6 +1,7 @@
 @use "../colors" as *;
 @use "../font" as *;
-
+@use "../header" as *;
+@use "../footer" as *;
   .title {
     text-align: center;
     padding: 60px 20px 80px;
