@@ -3,9 +3,18 @@
 @use "../header" as *;
 @use "../footer" as *;
 
+  body {
+        padding-left: 60px;
+        overflow-x: hidden;
+    }
   main {
     padding-top: 150px;
     overflow-x: hidden;
+  }
+  @media (max-width: 901px) {
+    main {
+      padding-top: 80px;
+    }
   }
   .title {
     text-align: center;
