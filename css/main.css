@@ -1481,8 +1481,8 @@ footer span {
 }
 
 body {
-  padding-left: 60px;
   overflow-x: hidden;
+  width: 100%;
 }
 
 main {
@@ -1491,6 +1491,10 @@ main {
 }
 
 @media (max-width: 901px) {
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
   main {
     padding-top: 80px;
   }
@@ -1515,6 +1519,10 @@ main {
   font-weight: 400;
 }
 @media (max-width: 600px) {
+  .title body {
+    overflow-x: hidden;
+    width: 100%;
+  }
   .title {
     padding: 40px 10px 60px;
   }
@@ -1574,6 +1582,16 @@ main {
   display: inline-block;
   align-self: flex-start;
   width: auto;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.bio .bio-text .btn:hover, .bio .bio-text .btn:focus-visible {
+  border-color: white;
+  background-color: #a06b67;
+  color: #fff;
+}
+.bio .bio-text .btn:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.75);
+  outline-offset: 3px;
 }
 @media (max-width: 900px) {
   .bio {
@@ -1761,6 +1779,16 @@ main {
   display: inline-block;
   align-self: flex-start;
   width: auto;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.services-container .wedding-text .btn:hover, .services-container .wedding-text .btn:focus-visible, .services-container .party-text .btn:hover, .services-container .party-text .btn:focus-visible, .services-container .shoot-text .btn:hover, .services-container .shoot-text .btn:focus-visible {
+  border-color: white;
+  background-color: #a06b67;
+  color: #fff;
+}
+.services-container .wedding-text .btn:focus-visible, .services-container .party-text .btn:focus-visible, .services-container .shoot-text .btn:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.75);
+  outline-offset: 3px;
 }
 @media (min-width: 768px) {
   .services-container .services-title p {

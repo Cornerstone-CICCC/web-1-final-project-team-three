@@ -1,17 +1,19 @@
 @use "../colors" as *;
 @use "../font" as *;
-@use "../header" as *;
-@use "../footer" as *;
-
+  
   body {
-        padding-left: 60px;
-        overflow-x: hidden;
-    }
+    overflow-x: hidden;
+    width: 100%;
+  }
   main {
     padding-top: 150px;
     overflow-x: hidden;
   }
   @media (max-width: 901px) {
+    body {
+      overflow-x: hidden;
+      width: 100%;
+    }
     main {
       padding-top: 80px;
     }
@@ -37,6 +39,10 @@
         font-weight: 400;
     }
     @media (max-width: 600px) {
+      body {
+        overflow-x: hidden;
+        width: 100%;
+      }
       padding: 40px 10px 60px;
       h3 {
         font-size: 2rem;
@@ -100,6 +106,20 @@
             display: inline-block;
             align-self: flex-start;
             width: auto;
+            transition: background-color 0.3s ease, color 0.3s ease,
+            border-color 0.3s ease;
+
+            &:hover,
+            &:focus-visible {
+              border-color: rgba(#fff, 1);
+              background-color: $color-brown;
+              color: #fff;
+            }
+
+            &:focus-visible {
+              outline: 2px solid rgba(#fff, 0.75);
+              outline-offset: 3px;
+            }
         }
       }
       @media (max-width: 900px) {
