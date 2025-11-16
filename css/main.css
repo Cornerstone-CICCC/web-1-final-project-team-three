@@ -1480,6 +1480,11 @@ footer span {
   color: #b65050;
 }
 
+main {
+  padding-top: 150px;
+  overflow-x: hidden;
+}
+
 .title {
   text-align: center;
   padding: 60px 20px 80px;
@@ -1562,11 +1567,13 @@ footer span {
 }
 @media (max-width: 900px) {
   .bio {
-    padding: 40px 20px;
+    padding: 40px 10px;
   }
   .bio .bio-container {
+    width: 100%;
     flex-direction: column;
     gap: 30px;
+    box-sizing: border-box;
   }
   .bio img {
     width: 80%;
@@ -1591,11 +1598,14 @@ footer span {
   text-align: center;
 }
 .brands .brands-container {
-  width: min(1100px, 92%);
+  width: min(1100px, 100%);
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: clamp(2rem, 4vw, 3rem);
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 .brands h3 {
   font-family: "Baskervville";
@@ -1626,6 +1636,7 @@ footer span {
 @media (max-width: 768px) {
   .brands .grid-brands {
     grid-template-columns: repeat(2, 1fr);
+    gap: 30px 10px;
   }
 }
 

@@ -2,6 +2,11 @@
 @use "../font" as *;
 @use "../header" as *;
 @use "../footer" as *;
+
+  main {
+    padding-top: 150px;
+    overflow-x: hidden;
+  }
   .title {
     text-align: center;
     padding: 60px 20px 80px;
@@ -89,11 +94,13 @@
         }
       }
       @media (max-width: 900px) {
-        padding: 40px 20px;
+        padding: 40px 10px;
 
         .bio-container {
+          width: 100%;
           flex-direction: column;
           gap: 30px;
+          box-sizing: border-box;
         }
         img {
           width: 80%;
@@ -119,11 +126,14 @@
       text-align: center;
 
       .brands-container {
-      width: min(1100px, 92%);
+      width: min(1100px, 100%);
+      max-width: 1100px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
       gap: clamp(2rem, 4vw, 3rem);
+      padding: 0 20px;
+      box-sizing: border-box;
       }
 
       h3 {
@@ -153,6 +163,7 @@
         }
         @media (max-width: 768px) {
           grid-template-columns: repeat(2, 1fr);
+          gap: 30px 10px;
         }
       }
     }
