@@ -1480,6 +1480,12 @@ footer span {
   color: #b65050;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   overflow-x: hidden;
   width: 100%;

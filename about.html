@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/f8be10a101.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
     <header>
@@ -60,8 +63,8 @@
 
     <main>
         <section class="title">
-        <h3>ABOUT</h3>
-        <h1>CARLA BEAUTY</h1>
+            <h3>ABOUT</h3>
+            <h1>CARLA BEAUTY</h1>
         </section>
 
         <section class="bio">
@@ -70,9 +73,13 @@
 
                 <div class="bio-text">
                     <h3>Hi, I'm Carla Beatriz, the Founder of Carla Beauty.</h3>
-                    <p>At Carla Beauty, our commitment lies in personalized service in enhncung natural beauty of individuals. With a focus on the clients style and skin type, we create customized makeup looks using high-quality products and staying updated on the latest trends. As a L'Oreal Certified professional makeup artist with over a decade of experince in Brazil and Canada, my goal is to provide clients with an unforggettable expirience that leaves them feeling ans confident.</p>
+                    <p>At Carla Beauty, our commitment lies in personalized service in enhncung natural beauty of
+                        individuals. With a focus on the clients style and skin type, we create customized makeup looks
+                        using high-quality products and staying updated on the latest trends. As a L'Oreal Certified
+                        professional makeup artist with over a decade of experince in Brazil and Canada, my goal is to
+                        provide clients with an unforggettable expirience that leaves them feeling ans confident.</p>
 
-                <a href="./portfolio.html" class="btn">My Work</a>
+                    <a href="./portfolio.html" class="btn">My Work</a>
 
                 </div>
             </div>
@@ -81,17 +88,17 @@
 
         <section class="brands">
             <div class="brands-container">
-            <h3>Our Brands</h3>
+                <h3>Our Brands</h3>
 
                 <div class="grid-brands">
-                <img src="../assets/about/MAC_Cosmetics_logo 1.png" alt="MAC_logo">
-                <img src="../assets/about/2560px-Lancôme_logo 1.png" alt="Lancome_logo">
-                <img src="../assets/about/inglot 1.png" alt="Inglot_logo">
-                <img src="../assets/about/Laura Mercier_logo 1.png" alt="Laura_Mercier_logo">
-                <img src="../assets/about/Charlotte_Tilbury.png" alt="Charlotte_Tilbury_logo">
-                <img src="../assets/about/tarte 1.png" alt="Tarte_logo">
-                <img src="../assets/about/Anastasia.png" alt="Anastasia_logo">
-                <img src="../assets/about/kryolan 1.png" alt="Kryolan_logo">
+                    <img src="../assets/about/MAC_Cosmetics_logo 1.png" alt="MAC_logo">
+                    <img src="../assets/about/2560px-Lancôme_logo 1.png" alt="Lancome_logo">
+                    <img src="../assets/about/inglot 1.png" alt="Inglot_logo">
+                    <img src="../assets/about/Laura Mercier_logo 1.png" alt="Laura_Mercier_logo">
+                    <img src="../assets/about/Charlotte_Tilbury.png" alt="Charlotte_Tilbury_logo">
+                    <img src="../assets/about/tarte 1.png" alt="Tarte_logo">
+                    <img src="../assets/about/Anastasia.png" alt="Anastasia_logo">
+                    <img src="../assets/about/kryolan 1.png" alt="Kryolan_logo">
                 </div>
             </div>
         </section>
@@ -121,6 +128,42 @@
         </div>
         <span>Copyright 2024, Carla Beauty</span>
     </footer>
-    
+
 </body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const logo = document.querySelector('.nav-logo');
+        const originalSrc = logo.getAttribute('src');
+        const scrolledSrc = './assets/common/logo.svg';
+        const threshold = 50;
+
+        const pre = new Image();
+        pre.src = scrolledSrc;
+
+        let lastState = 'top';
+        window.addEventListener('scroll', function () {
+            const state = window.scrollY > threshold ? 'scrolled' : 'top';
+            if (state === lastState) return;
+            lastState = state;
+
+            logo.style.transition = 'opacity 3s ease';
+            logo.style.opacity = '0';
+            setTimeout(() => {
+                logo.setAttribute('src', state === 'scrolled' ? scrolledSrc : originalSrc);
+                logo.style.opacity = '1';
+            }, 160);
+        });
+
+        const hamburgerMenu = document.querySelector('.navbar-mobile .hamburger-menu');
+        const navLinks = document.querySelector('.navbar-mobile .menu-mobile');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            hamburgerMenu.classList.toggle('open');
+            document.body.classList.toggle('no-scroll');
+        });
+    });
+</script>
+
 </html>
