@@ -1675,6 +1675,12 @@ main {
   }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   padding-left: 0;
   overflow-x: hidden;
@@ -1732,18 +1738,24 @@ main {
   gap: 3rem;
   align-items: flex-start;
 }
-.services-container .wedding-cont, .services-container .party-cont, .services-container .shoot-cont {
+.services-container .wedding-cont,
+.services-container .party-cont,
+.services-container .shoot-cont {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.services-container .wedding-cont h3, .services-container .party-cont h3, .services-container .shoot-cont h3 {
+.services-container .wedding-cont h3,
+.services-container .party-cont h3,
+.services-container .shoot-cont h3 {
   color: #725a58;
   font-family: "Baskervville";
   font-weight: 400;
   margin: 0;
 }
-.services-container .wedding-photo, .services-container .party-photo, .services-container .shoot-photo {
+.services-container .wedding-photo,
+.services-container .party-photo,
+.services-container .shoot-photo {
   width: 100%;
   max-width: 100%;
   display: block;
@@ -1763,19 +1775,25 @@ main {
   align-items: center;
   gap: 0.5rem;
 }
-.services-container .wedding-text h6, .services-container .party-text h6, .services-container .shoot-text h6 {
+.services-container .wedding-text h6,
+.services-container .party-text h6,
+.services-container .shoot-text h6 {
   color: #191919;
   font-family: "Baskervville";
   font-weight: 100;
   margin: 0;
 }
-.services-container .wedding-text p, .services-container .party-text p, .services-container .shoot-text p {
+.services-container .wedding-text p,
+.services-container .party-text p,
+.services-container .shoot-text p {
   font-family: "Avenir";
   color: #191919;
   font-weight: 300;
   margin: 0 0 20px;
 }
-.services-container .wedding-text .btn, .services-container .party-text .btn, .services-container .shoot-text .btn {
+.services-container .wedding-text .btn,
+.services-container .party-text .btn,
+.services-container .shoot-text .btn {
   font-family: "Baskervville";
   color: #725a58;
   font-size: 1rem;
@@ -1788,12 +1806,18 @@ main {
   width: auto;
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
-.services-container .wedding-text .btn:hover, .services-container .wedding-text .btn:focus-visible, .services-container .party-text .btn:hover, .services-container .party-text .btn:focus-visible, .services-container .shoot-text .btn:hover, .services-container .shoot-text .btn:focus-visible {
+.services-container .wedding-text .btn:hover, .services-container .wedding-text .btn:focus-visible,
+.services-container .party-text .btn:hover,
+.services-container .party-text .btn:focus-visible,
+.services-container .shoot-text .btn:hover,
+.services-container .shoot-text .btn:focus-visible {
   border-color: white;
   background-color: #a06b67;
   color: #fff;
 }
-.services-container .wedding-text .btn:focus-visible, .services-container .party-text .btn:focus-visible, .services-container .shoot-text .btn:focus-visible {
+.services-container .wedding-text .btn:focus-visible,
+.services-container .party-text .btn:focus-visible,
+.services-container .shoot-text .btn:focus-visible {
   outline: 2px solid rgba(255, 255, 255, 0.75);
   outline-offset: 3px;
 }
@@ -1815,13 +1839,17 @@ main {
     margin: 0 auto 48px;
     gap: 0;
   }
-  .services-container .wedding-photo, .services-container .party-photo, .services-container .shoot-photo {
+  .services-container .wedding-photo,
+  .services-container .party-photo,
+  .services-container .shoot-photo {
     width: 100%;
     max-width: 100%;
     display: block;
     object-fit: cover;
   }
-  .services-container .wedding-cont, .services-container .party-cont, .services-container .shoot-cont {
+  .services-container .wedding-cont,
+  .services-container .party-cont,
+  .services-container .shoot-cont {
     padding: 24px 20px 32px;
   }
   .services-container .dollar-time {
