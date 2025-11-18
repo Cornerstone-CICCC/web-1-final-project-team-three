@@ -1,0 +1,12 @@
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Build artifacts
+dist/
+node_modules/
+
+# System files
+.DS_Store
+

@@ -1,0 +1,1349 @@
+@use "../colors" as *;
+@use "../font" as *;
+
+// first view section
+.first-view {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  height: 800px;
+  color: #fff;
+  background-image: url("../assets/home/home_top.jpg");
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__wrapper {
+    margin: 0 auto;
+    @media (max-width: 1024px) {
+      padding: 0 20px;
+    }
+    text-align: center;
+  }
+
+  &__content {
+    font-size: 18px;
+  }
+
+  &__wordmark {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    margin: 0;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    line-height: 1.7;
+    color: rgba(#fff, 0.88);
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    height: 30px;
+    font-family: $font-baskervville;
+    font-size: 20px;
+    letter-spacing: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 400;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    padding: 0.95rem 2.8rem;
+    width: fit-content;
+    transition: background-color 0.3s ease, color 0.3s ease,
+      border-color 0.3s ease;
+
+    &:hover,
+    &:focus-visible {
+      border-color: rgba(#fff, 1);
+      background-color: rgba(#fff, 0.12);
+      color: #fff;
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba(#fff, 0.75);
+      outline-offset: 3px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__content {
+      max-width: 28rem;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__cta {
+      width: 100%;
+      max-width: 18rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    min-height: clamp(30rem, 95vh, 40rem);
+    padding: clamp(6rem, 16vh, 8rem) 0 clamp(4rem, 12vh, 6rem);
+
+    &::before {
+      background: linear-gradient(
+        140deg,
+        rgba($color-brand-black, 0.78) 0%,
+        rgba($color-brand-black, 0.6) 55%,
+        rgba($color-brand-black, 0.3) 100%
+      );
+    }
+
+    &__eyebrow {
+      letter-spacing: 0.3em;
+    }
+  }
+}
+
+// professional makeup & hairstyle artist section
+.professional-makeup-hairstyle {
+  background: $color-pale-white;
+  padding: 100px 0;
+  color: $color-brand-black;
+
+  &__wrapper {
+    width: 60%;
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(2.5rem, 6vw, 5rem);
+  }
+
+  &__portrait-wrapper {
+    position: relative;
+  }
+
+  &__portrait {
+    display: block;
+    height: 510px;
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: $color-brand-black;
+  }
+
+  &__monogram {
+    width: 60px;
+    margin-bottom: 20px;
+    height: auto;
+  }
+
+  &__heading {
+    margin: 0;
+    font-size: clamp(2.25rem, 4vw, 3.5rem);
+    font-family: $font-baskervville;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 20px;
+    color: $color-brand-black;
+  }
+
+  &__description {
+    margin: 0;
+    max-width: 29rem;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: rgba($color-brand-black, 0.74);
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 2.5rem);
+    margin-top: clamp(0.5rem, 2vw, 1.75rem);
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  &__button {
+    padding: 20px 30px;
+    font-family: $font-baskervville;
+    font-size: 20px;
+    font-weight: 400;
+    border: 1px solid $color-brown;
+    color: $color-bold-main;
+    text-decoration: none;
+    background: transparent;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-dark-pink;
+      border-color: $color-dark-pink;
+      color: $color-pale-white;
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba($color-bold-main, 0.35);
+      outline-offset: 4px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__wrapper {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+
+    &__content {
+      align-items: center;
+    }
+
+    &__description {
+      width: 80%;
+    }
+
+    &__cta {
+      flex-direction: row-reverse;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    &__button {
+      width: 100%;
+    }
+  }
+}
+
+// our brands section
+.our-brands {
+  background: $color-pale-white;
+
+  &__wrapper {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2rem, 4vw, 3rem);
+  }
+
+  &__heading {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.5rem, 3.5vw, 3rem);
+  }
+
+  &__line {
+    display: block;
+    height: 1px;
+    width: 38%;
+    @media (max-width: 1024px) {
+      width: 30%;
+    }
+    background-color: rgba($color-brand-black, 0.18);
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $font-avenir;
+    font-size: 20px;
+    font-weight: 400;
+    color: $color-bold-main;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 0;
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+// you are a star section
+.you-are-a-star {
+  background: $color-light-pink;
+
+  &__wrapper {
+    margin: 60px auto 0 auto;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__intro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $font-baskervville;
+    font-weight: 400;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: $color-bold-main;
+  }
+
+  &__divider {
+    display: block;
+    width: 200px;
+    height: 1px;
+    background-color: $color-accent-pink;
+  }
+
+  &__description {
+    margin: 0;
+    max-width: 540px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba($color-brand-black, 0.78);
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 3rem;
+    border: 1px solid #5e4a49;
+    color: #5e4a49;
+    text-decoration: none;
+    font-family: $font-baskervville;
+    font-size: 20px;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-dark-pink;
+      color: $color-pale-white;
+      border-color: $color-dark-pink;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-dark-pink;
+      outline-offset: 4px;
+    }
+  }
+
+  &__gallery {
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(1.25rem, 3vw, 1.75rem);
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__card {
+    margin: 0;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    height: 500px;
+    @media (max-width: 1024px) {
+      height: 300px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+}
+
+// quotes section
+.quotes {
+  background: $color-light-pink;
+  padding-bottom: 80px;
+
+  &__wrapper {
+    width: min(860px, 92%);
+    margin: 0 auto;
+  }
+
+  &__slides {
+    position: relative;
+  }
+
+  &__slide {
+    display: none;
+    text-align: center;
+    color: $color-brand-black;
+    animation: fadeIn 0.4s ease;
+
+    &.is-active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(1.25rem, 2.5vw, 2rem);
+    }
+  }
+
+  &__icon {
+    width: clamp(1.6rem, 3vw, 2rem);
+    height: auto;
+  }
+
+  &__text {
+    margin: 0;
+    font-family: $font-baskervville;
+    font-size: clamp(1.45rem, 2.6vw, 1.85rem);
+    line-height: 1.65;
+    color: rgba($color-brand-black, 0.85);
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    margin-top: clamp(1rem, 2vw, 1.75rem);
+  }
+
+  &__signature {
+    width: clamp(5.5rem, 10vw, 8rem);
+    height: auto;
+  }
+
+  &__arrow {
+    border: none;
+    background: transparent;
+    font-size: clamp(1.75rem, 3vw, 2.1rem);
+    color: rgba($color-brand-black, 0.45);
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-bold-main;
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 2px rgba($color-bold-main, 0.35);
+      border-radius: 50%;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// makeup & hairstyle section
+.makeup-hairstyle {
+  background: $color-pale-white;
+  padding: clamp(5rem, 9vw, 7rem) 0;
+
+  &__wrapper {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  &__intro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 1.8rem);
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $font-baskervville;
+    font-size: 80px;
+    font-weight: 100;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: $color-bold-main;
+    @media (max-width: 1024px) {
+      font-size: 40px;
+    }
+  }
+
+  &__divider {
+    display: block;
+    width: 200px;
+    height: 1px;
+    background-color: $color-dark-pink;
+  }
+
+  &__description {
+    margin: 0;
+    max-width: 28rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: rgba($color-brand-black, 0.82);
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+    border: 1px solid $color-dark-pink;
+    color: $color-dark-pink;
+    text-decoration: none;
+    font-family: $font-baskervville;
+    font-size: 1.1rem;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-bold-main;
+      color: $color-pale-white;
+      border-color: $color-bold-main;
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba($color-bold-main, 0.35);
+      outline-offset: 4px;
+    }
+  }
+
+  &__services {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.5rem, 4vw, 2.75rem);
+
+    @media (max-width: 960px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.service-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  @media (max-width: 1024px) {
+    padding: 0 8%;
+  }
+
+  &__media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    bottom: 50px;
+    left: -40px;
+    margin: 0;
+    font-family: $font-baskervville;
+    font-size: 70px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: $color-light-pink;
+    text-align: left;
+    pointer-events: none;
+    @media (max-width: 1024px) {
+      text-align: center;
+      font-size: 50px;
+      left: 80px;
+    }
+  }
+
+  &--party {
+    @media (max-width: 1024px) {
+      order: 2;
+    }
+  }
+  &--wedding {
+    @media (max-width: 1024px) {
+      order: 1;
+    }
+  }
+  &--photoshoot {
+    @media (max-width: 1024px) {
+      order: 3;
+    }
+  }
+}
+
+// makeup 101 section
+.makeup-101 {
+  background: $color-pale-white;
+  margin: 0 5%;
+  @media (max-width: 1024px) {
+    margin: 0;
+  }
+
+  &__title {
+    background: $color-light-pink;
+    text-align: center;
+    font-family: $font-baskervville;
+    font-weight: 100;
+    font-size: 80px;
+    padding: 60px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: $color-bold-main;
+    @media (max-width: 1024px) {
+      font-size: 40px;
+      padding: 60px 0;
+    }
+  }
+
+  &__wrapper {
+    background: $color-light-pink;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    align-items: stretch;
+    padding: 60px 5%;
+
+    @media (max-width: 980px) {
+      grid-template-columns: 1fr;
+      padding: 0;
+    }
+  }
+
+  &__content {
+    h3 {
+      font-size: 32px;
+      font-weight: 400;
+    }
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 3vw, 2.25rem);
+  }
+
+  &__cta {
+    align-self: flex-start;
+    margin-top: 20px;
+    padding: 20px 30px;
+    border: 1px solid $color-bold-main;
+    font-family: $font-baskervville;
+    font-size: 18px;
+    color: $color-bold-main;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-bold-main;
+      color: $color-pale-white;
+    }
+
+    @media (max-width: 1024px) {
+      margin: 20px auto;
+      width: 70%;
+      text-align: center;
+    }
+  }
+
+  &__media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__frame {
+    position: relative;
+    position: relative;
+    display: inline-block;
+    height: 530px;
+    width: 407px;
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__frame::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    box-shadow: inset 0 0 0 1px white;
+  }
+}
+
+.class-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 30px;
+  align-items: start;
+  color: $color-brand-black;
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $font-baskervville;
+    font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+    color: $color-bold-main;
+  }
+
+  &__description {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba($color-brand-black, 0.75);
+    @media (max-width: 1024px) {
+      padding: 0 2%;
+    }
+  }
+
+  &__p {
+    display: none;
+    @media (max-width: 1024px) {
+      display: inline-flex;
+      align-items: center;
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    text-align: center;
+
+    &__link {
+      align-self: center;
+    }
+  }
+}
+
+// diy beauty corner section
+.diy-beauty-corner {
+  background: $color-pale-white;
+  padding-top: 80px;
+
+  &__wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(2.5rem, 6vw, 3.5rem);
+  }
+
+  &__header {
+    h2 {
+      font-weight: 100;
+      letter-spacing: 0.8;
+    }
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 1024px) {
+      h2 {
+        font-size: 32px;
+        font-weight: 100;
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $font-baskervville;
+    font-size: clamp(2.4rem, 4.5vw, 3.1rem);
+    color: $color-bold-main;
+    letter-spacing: 0.22em;
+  }
+
+  &__divider {
+    display: none;
+
+    @media (max-width: 1024px) {
+      display: block;
+      width: 300px;
+      height: 1px;
+      background: rgba($color-accent-pink, 1);
+    }
+  }
+
+  &__videos {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__track {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: center;
+    gap: 40px;
+    @media (max-width: 1024px) {
+      display: flex;
+      gap: 5px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 2.8rem;
+    border: 1px solid $color-bold-main;
+    font-family: $font-baskervville;
+    font-size: 1.05rem;
+    color: $color-bold-main;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-bold-main;
+      color: $color-pale-white;
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba($color-bold-main, 0.35);
+      outline-offset: 4px;
+    }
+  }
+}
+
+.video-card {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  width: 300px;
+  height: 300px;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba($color-brand-black, 0.65),
+      rgba($color-brand-black, 0.05)
+    );
+    pointer-events: none;
+  }
+
+  &__play {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    color: #f8f6f4;
+    display: grid;
+    place-items: center;
+    font-size: 1.9rem;
+    pointer-events: none;
+  }
+
+  &__caption {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: rgba(#fff, 0.92);
+  }
+}
+
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background: $color-brand-black;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  &.is-open {
+    display: flex;
+  }
+
+  &__dialog {
+    width: min(960px, 100%);
+    aspect-ratio: 16 / 9;
+    background: #000;
+    position: relative;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  &__close {
+    position: absolute;
+    top: -48px;
+    right: 0;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 2.2rem;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-accent-pink;
+    }
+  }
+}
+
+// lets talk section
+.lets-talk {
+  background: $color-pale-white;
+  padding: 120px 0;
+
+  &__intro {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    font-size: 80px;
+    @media (max-width: 1024px) {
+      font-size: 40px;
+    }
+
+    line-height: 130%;
+    letter-spacing: 13%;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: $color-bold-main;
+  }
+
+  &__description {
+    font-size: 18px;
+    color: $color-brand-black;
+    padding: 0 30%;
+    @media (max-width: 1024px) {
+      padding: 0 10%;
+    }
+  }
+
+  &__card {
+    margin: 0 20%;
+    @media (max-width: 1024px) {
+      margin: 0;
+    }
+
+    background: $color-light-pink;
+    padding: 40px 5%;
+  }
+
+  &__card-title {
+    text-align: center;
+    padding-bottom: 6px;
+    font-weight: 400;
+    border-bottom: 1px solid $color-brand-black;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.form-section {
+  border: none;
+
+  legend {
+    font-family: $font-baskervville;
+    color: $color-brand-black;
+    font-size: 32px;
+    font-weight: 400;
+  }
+}
+
+.option-group--toggle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+  gap: 6px;
+}
+
+.toggle {
+  input {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  // Wedding, Party, Photoshoot
+  span {
+    display: block;
+    position: relative;
+    font-size: 20px;
+    font-weight: 400;
+    background: #fff;
+    font-family: $font-baskervville;
+    color: $color-dark-grey;
+    padding: 17px 16px;
+    padding-right: 54px;
+    border: 1px solid transparent;
+    text-transform: capitalize;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../assets/home/check.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateY(-50%) scale(0.85);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    opacity: 0;
+  }
+
+  input:checked + span {
+    background: #fff;
+    color: $color-bold-main;
+    border-color: rgba($color-bold-main, 0.55);
+    box-shadow: 0 0 0 1.5px rgba($color-accent-pink, 0.35);
+  }
+
+  input:checked + span::after {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+
+  span:hover {
+    border-color: rgba($color-bold-main, 0.55);
+  }
+}
+
+.form-grid {
+  display: grid;
+  gap: clamp(1.75rem, 3vw, 2.5rem);
+
+  @media (min-width: 720px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+}
+
+.field {
+  display: block;
+
+  input,
+  select {
+    box-sizing: border-box;
+    border: 1px solid $color-dark-pink;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #fff;
+    color: #888888;
+    font-size: 18px;
+  }
+
+  input::placeholder {
+    color: #888888;
+  }
+
+  input:focus,
+  select:focus {
+    border-color: $color-bold-main;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($color-bold-main, 0.13);
+    background-color: rgba(#fff, 0.99);
+  }
+
+  &.is-disabled {
+    input,
+    select {
+      background-color: rgba($color-paper-white, 0.6);
+      color: rgba($color-brand-black, 0.4);
+      cursor: not-allowed;
+    }
+  }
+}
+
+.field--date,
+.field--select {
+  position: relative;
+
+  select {
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 1.15rem center;
+    padding-right: 3rem;
+  }
+}
+
+.contact-phone {
+  display: flex;
+  align-items: center;
+
+  border: 1px solid $color-dark-pink;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.contact-phone select,
+.contact-phone input {
+  border: none;
+  outline: none;
+  padding: 15px 20px;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.contact-phone select {
+  flex-shrink: 0;
+  border-right: 1px solid #ccc;
+}
+
+.contact-phone input {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.contact-phone input::placeholder {
+  color: #a0a0a0;
+}
+
+.contact-phone label:last-child {
+  flex-grow: 1;
+}
+
+.checkbox,
+.radio {
+  display: inline-flex;
+  align-items: center;
+  font-size: 18px;
+  color: $color-brand-black;
+  cursor: pointer;
+
+  input {
+    width: 17px;
+    height: 17px;
+    border: 1px solid $color-brown;
+    appearance: none;
+    display: grid;
+    place-items: center;
+    background: #fff;
+  }
+
+  input:checked {
+    background: $color-brown;
+  }
+
+  input[type="radio"] {
+    border-radius: 50%;
+  }
+
+  input[type="checkbox"]:checked::after {
+    width: 8px;
+    height: 8px;
+    background: #fff;
+  }
+}
+
+.radio {
+  display: block;
+  margin-bottom: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio span {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+
+  padding-left: 30px;
+}
+
+.radio input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.radio span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-sizing: border-box;
+
+  background-color: #fff;
+  border: 2px solid #ddd;
+}
+
+.radio span::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: all 0.2s;
+}
+
+.radio input[type="radio"]:checked + span::before {
+  border-color: $color-dark-pink;
+}
+
+.radio input[type="radio"]:checked + span::after {
+  background-color: $color-dark-pink;
+}
+
+.contact-method {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.form-button {
+  display: inline-flex;
+  align-items: center;
+  color: #5e4a49;
+  justify-content: center;
+  min-width: 160px;
+  height: 62px;
+  border: 1px solid #5e4a49;
+  font-family: $font-baskervville, serif;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  background: transparent;
+
+  &:hover {
+    border: 1px solid $color-dark-pink;
+    color: $color-pale-white;
+    background-color: $color-dark-pink;
+  }
+
+  @media (max-width: 1024px) {
+    width: 90%;
+  }
+}
+
+.form-feedback {
+  min-height: 1.25rem;
+  font-size: 0.95rem;
+  color: $color-bold-main;
+  text-align: center;
+  font-weight: 500;
+
+  &.is-success {
+    color: #2f7a4d;
+  }
+
+  &.is-error {
+    color: #b65050;
+  }
+}

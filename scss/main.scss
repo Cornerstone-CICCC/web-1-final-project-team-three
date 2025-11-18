@@ -1,0 +1,46 @@
+// To apply to main.css, run `sass ./scss/main.scss:./css/main.css`
+@use "colors";
+@use "font";
+@use "header";
+@use "footer";
+@use "pages/home";
+@use "pages/about";
+@use "pages/service";
+
+body {
+  margin: 0;
+  font-family: font.$font-avenir;
+  font-size: 18px;
+  color: colors.$color-brand-black;
+  background-color: colors.$color-pale-white;
+}
+
+h1 {
+  font-size: 80px;
+  font-family: font.$font-baskervville;
+}
+
+h2 {
+  font-size: 68px;
+  font-family: font.$font-baskervville;
+}
+
+h3 {
+  font-size: 48px;
+  font-family: font.$font-baskervville;
+}
+
+h4 {
+  font-size: 36px;
+  font-family: font.$font-baskervville;
+}
+
+h5 {
+  font-size: 32px;
+  font-family: font.$font-baskervville;
+}
+
+h6 {
+  font-size: 24px;
+  font-family: font.$font-baskervville;
+}

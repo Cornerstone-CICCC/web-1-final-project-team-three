@@ -1,0 +1,143 @@
+@use "../colors" as *;
+@use "../font" as *;
+@use "../header" as *;
+@use "../footer" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* PORTFOLIO STYLES */
+
+.main-hero {
+  background-color: $color-pale-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 227px;
+  padding-bottom: 1rem;
+
+  h1 {
+    color: $color-brown;
+    font-size: 5rem;
+    line-height: 130%;
+    letter-spacing: 13%;
+    font-weight: 400;
+    font-family: $font-baskervville;
+  }
+  hr {
+    width: 200px;
+    margin-bottom: 2rem;
+  }
+  p {
+    font-weight: 300px;
+    font-size: 1.125rem;
+    line-height: 150%;
+    max-width: 585px;
+    text-align: center;
+    font-family: $font-avenir;
+  }
+}
+.main-content {
+  background-color: $color-light-pink;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-content-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  padding-top: 3rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px $color-mid-grey solid;
+  position: relative;
+
+  button {
+    font-family: $font-baskervville;
+    border: none;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 130%;
+    background-color: $color-light-pink;
+    padding-bottom: 11px;
+    position: relative;
+    cursor: pointer;
+    padding: 0px 2rem 11px 2rem;
+  }
+
+  button:not(.selected) {
+    color: $color-mid-grey;
+  }
+
+  button.selected {
+    color: $color-brand-black;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $color-brand-black;
+    }
+  }
+}
+.makeup-images,
+.hairstyle-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 1rem;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 1s ease;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.hairstyle-images {
+  display: none;
+}
+.btn-more {
+  border: 0.8px $color-brown solid;
+  padding: 24px 32px;
+  color: $color-brown;
+  margin-top: 60px;
+  margin-bottom: 130px;
+  font-size: 1.25rem;
+  font-family: $font-baskervville;
+}
+
+@media (max-width: 901px) {
+  .main-content-buttons {
+    gap: 1em;
+    button {
+      padding: 0.5rem;
+    }
+  }
+  .makeup-images,
+  .hairstyle-images {
+    grid-template-columns: 1fr;
+  }
+  .makeup-images img,
+  .hairstyle-images img {
+    display: none;
+  }
+
+  .makeup-images img:nth-child(-n + 4),
+  .hairstyle-images img:nth-child(-n + 4) {
+    display: block;
+  }
+
+  .expanded img {
+    display: block !important;
+  }
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/f8be10a101.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="wrapper navbar-desktop">
+        <ul class="nav-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./portfolio.html">My Work</a></li>
+          <li><a href="./service.html">Services</a></li>
+          <li><a href="">Classes</a></li>
+          <li>
+            <a href=""
+              ><img
+                src="./assets/common/named_logo.svg"
+                alt=""
+                class="nav-logo"
+            /></a>
+          </li>
+          <li><a href="">Beauty Tips</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./index.html#lets-talk">Contact</a></li>
+          <li>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="wrapper navbar-mobile">
+        <button class="hamburger-menu" aria-label="Toggle menu">
+          <img src="./assets/common/menu.svg" alt="menu" class="menu-icon" />
+          <img src="./assets/common/close.svg" alt="close" class="close-icon" />
+        </button>
+
+        <div class="mobile-logo">
+          <img
+            src="./assets/common/named_logo.svg"
+            alt="Carla Beauty"
+            class="nav-logo"
+          />
+        </div>
+
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+
+        <div class="menu-mobile">
+          <img
+            src="./assets/common/named_logo.svg"
+            alt="Carla Beauty"
+            class="nav-logo logo-modal"
+          />
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./portfolio.html">My Work</a></li>
+            <li><a href="./service.html">Services</a></li>
+            <li><a href="">Classes</a></li>
+            <li><a href="">Beauty Tips</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./index.html#lets-talk">Contact</a></li>
+          </ul>
+          <div class="container-socials">
+            <div class="socials-mobile">
+              <a href=""><img src="./assets/common/phone.svg" alt="" /></a>
+              <a href=""><img src="./assets/common/whatsapp.svg" alt="" /></a>
+              <a href=""><img src="./assets/common/instagram.svg" alt="" /></a>
+            </div>
+            <span>Expert Makeup and Hairstyle Studio</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="title">
+        <h3>ABOUT</h3>
+        <h1>CARLA BEAUTY</h1>
+      </section>
+
+      <section class="bio">
+        <div class="bio-container">
+          <img
+            src="../assets/about/carla_beatriz.png"
+            alt="carla_Beatriz_photo"
+          />
+
+          <div class="bio-text">
+            <h3>Hi, I'm Carla Beatriz, the Founder of Carla Beauty.</h3>
+            <p>
+              At Carla Beauty, our commitment lies in personalized service in
+              enhncung natural beauty of individuals. With a focus on the
+              clients style and skin type, we create customized makeup looks
+              using high-quality products and staying updated on the latest
+              trends. As a L'Oreal Certified professional makeup artist with
+              over a decade of experince in Brazil and Canada, my goal is to
+              provide clients with an unforggettable expirience that leaves them
+              feeling ans confident.
+            </p>
+
+            <a href="./portfolio.html" class="btn">My Work</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="brands">
+        <div class="brands-container">
+          <h3>Our Brands</h3>
+
+          <div class="grid-brands">
+            <img
+              src="../assets/about/MAC_Cosmetics_logo 1.png"
+              alt="MAC_logo"
+            />
+            <img
+              src="../assets/about/2560px-Lancôme_logo 1.png"
+              alt="Lancome_logo"
+            />
+            <img src="../assets/about/inglot 1.png" alt="Inglot_logo" />
+            <img
+              src="../assets/about/Laura Mercier_logo 1.png"
+              alt="Laura_Mercier_logo"
+            />
+            <img
+              src="../assets/about/Charlotte_Tilbury.png"
+              alt="Charlotte_Tilbury_logo"
+            />
+            <img src="../assets/about/tarte 1.png" alt="Tarte_logo" />
+            <img src="../assets/about/Anastasia.png" alt="Anastasia_logo" />
+            <img src="../assets/about/kryolan 1.png" alt="Kryolan_logo" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrapper">
+      <div class="footer-top">
+        <img src="./assets/common/named_logo.svg" alt="" />
+        <span>Expert Makeup and Hairstyle Studio</span>
+        <div class="socials">
+          <a href=""><img src="./assets/common/phone.svg" alt="" /></a>
+          <a href=""><img src="./assets/common/whatsapp.svg" alt="" /></a>
+          <a href=""><img src="./assets/common/instagram.svg" alt="" /></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">My Work</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Classes</a></li>
+          <li><a href="">Beauty Tips</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+      <span>Copyright 2024, Carla Beauty</span>
+    </footer>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const logo = document.querySelector(".nav-logo");
+      const originalSrc = logo.getAttribute("src");
+      const scrolledSrc = "./assets/common/logo.svg";
+      const threshold = 50;
+
+      const pre = new Image();
+      pre.src = scrolledSrc;
+
+      let lastState = "top";
+      window.addEventListener("scroll", function () {
+        const state = window.scrollY > threshold ? "scrolled" : "top";
+        if (state === lastState) return;
+        lastState = state;
+
+        logo.style.transition = "opacity 3s ease";
+        logo.style.opacity = "0";
+        setTimeout(() => {
+          logo.setAttribute(
+            "src",
+            state === "scrolled" ? scrolledSrc : originalSrc
+          );
+          logo.style.opacity = "1";
+        }, 160);
+      });
+
+      const hamburgerMenu = document.querySelector(
+        ".navbar-mobile .hamburger-menu"
+      );
+      const navLinks = document.querySelector(".navbar-mobile .menu-mobile");
+
+      hamburgerMenu.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+        hamburgerMenu.classList.toggle("open");
+        document.body.classList.toggle("no-scroll");
+      });
+    });
+  </script>
+</html>
